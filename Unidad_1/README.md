@@ -3,6 +3,7 @@
 # Ejercicios
 
 - [Ejercicio 1](#ejercico-1)
+- [Ejercicio 2](#ejercico-2)
 
 ## Ejercico 1 <a name="ejercico-1"></a>
 
@@ -12,7 +13,7 @@ mayor y escribirlo.
 ### Diagrama de Flujo 
 
 
-<img src="images/diagrama-fluho.drawio.png/">
+<img src="images/diagrama-fluho.drawio.png">
 
 ###  Pseudocódigo
 
@@ -51,7 +52,7 @@ que se detecte la introducción de valores iguales.
 
 ### Diagrama de Flujo 
 
-<img src="images//">
+<img src="images/Diagrama_flujo2.drawio.png">
 
 ###  Pseudocódigo
 
