@@ -43,7 +43,7 @@ Paso :
 
 - Fin
 
-## Ejercico 1 <a name="ejercico-2"></a>
+## Ejercico 2 <a name="ejercico-2"></a>
 
 Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las variables A, B y C
 respectivamente. El algoritmo debe imprimir cual es el mayor y cual es el menor. Recuerde constatar que
