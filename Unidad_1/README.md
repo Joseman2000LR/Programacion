@@ -95,7 +95,7 @@ es decir, 1 + 2 + 3 + .... + 10.
 ### Diagrama de Flujo 
 
 
-<img src="images/">
+<img src="images/Diagrama_flujo3.drawio.png">
 
 ###  Pseudocódigo
 
