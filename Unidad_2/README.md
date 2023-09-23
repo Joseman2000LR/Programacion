@@ -1,1 +1,0 @@
-hacer readme para cada ejercicio
