@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 /**
- * @author Nombre del autor
+ * @author 
+ * Ejercicio numero 2
  */
 public class Ejercicio2 {
 
