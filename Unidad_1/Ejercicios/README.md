@@ -1,0 +1,1 @@
+carperta que tienes ejercicio hechos en clase 
