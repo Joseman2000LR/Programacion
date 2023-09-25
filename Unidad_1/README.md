@@ -39,7 +39,7 @@ Paso :
 
 - Fin
 
-## Ejercico 2 <a name="ejercico-2"></a>
+## Ejercico 2 <a name="ejercico-2"></a> 
 
 Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las variables A, B y C
 respectivamente. El algoritmo debe imprimir cual es el mayor y cual es el menor. Recuerde constatar que
@@ -119,7 +119,7 @@ Desarrolle el algoritmo correspondiente.
 ### Diagrama de Flujo
 
 
-<img src="images/Diagrama_flujo4.drawio.png">
+<img src="images/Diagramaejercio4.drawio.png">
 ###  Pseudocódigo
 
 Paso :
