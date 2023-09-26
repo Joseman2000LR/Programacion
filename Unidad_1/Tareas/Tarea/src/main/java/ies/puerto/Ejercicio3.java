@@ -1,13 +1,16 @@
+package ies.puerto;
+
 /**
- * @author Nombre del autor
+ * @author Joseman2000LR
  */
 public class Ejercicio3 {
 
     /**
      * Descripcion del algoritmo
+     * 
      * @param args
      */
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         int n = 0;
         int suma = 0;
 

@@ -1,16 +1,19 @@
+package ies.puerto;
+
 import java.util.Scanner;
 
 /**
- * @author 
- * Ejercicio numero 2
+ * @author Joseman2000LR
+ *         Ejercicio numero 2
  */
 public class Ejercicio2 {
 
     /**
      * Descripcion del algoritmo
+     * 
      * @param args
      */
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         int valorA, valorB, valorC;
         Scanner lectura = new Scanner(System.in);
         do {

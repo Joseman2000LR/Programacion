@@ -1,3 +1,5 @@
+package ies.puerto;
+
 import java.util.Scanner;
 
 /**
@@ -17,9 +19,9 @@ public class Ejercicio4 {
         valorN = lectura.nextInt();
         System.out.println("Valor de la variable es  : " + valorN);
         if (valorN / 2 == 0) {
-            System.out.println("El numero " + valorN + "es par");
+            System.out.println("El numero " + valorN + " es par");
         } else {
-            System.out.println("El numero " + valorN + "es impar");
+            System.out.println("El numero " + valorN + " es impar");
         }
 
     }
