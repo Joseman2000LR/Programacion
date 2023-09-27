@@ -99,7 +99,7 @@ formula indicada
 * __Fin__
 
 
-## Ejercico 4 <a name="ejercico-4"></a>
+## Ejercico 5 <a name="ejercico-5"></a>
 
 Desarrolle un algoritmo que permita leer dos números y ordenarlos de menor a mayor, si es el caso.
 
@@ -110,6 +110,30 @@ Desarrolle un algoritmo que permita leer dos números y ordenarlos de menor a ma
 ###  Pseudocódigo
 
 Paso :
+
+
+## Ejercico 6 <a name="ejercico-6"></a>
+
+Desarrolle un algoritmo que permita leer un valor entero positivo N y determinar si es primo o no.
+### Diagrama de Flujo
+
+<img src="images/Diagrama_flujo6.drawio">
+
+###  Pseudocódigo
+
+Paso :
+
+## Ejercico 7 <a name="ejercico-7"></a>
+
+Realice un algoritmo que a partir de proporcionarle la velocidad de un automóvil, expresada en kilómetros por hora, proporcione la velocidad en metros por segundo.
+### Diagrama de Flujo
+
+<img src="images/.drawio.png">
+
+###  Pseudocódigo
+
+Paso :
+
 
 
 </div>
