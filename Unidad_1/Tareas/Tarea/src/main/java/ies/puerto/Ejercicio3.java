@@ -6,7 +6,8 @@ package ies.puerto;
 public class Ejercicio3 {
 
     /**
-     * Descripcion del algoritmo
+     * algoritmo que realice la sumatoria de los números enteros
+     * comprendidos entre el 1 y el 10, es decir, 1 + 2 + 3 + …. + 10
      * 
      * @param args
      */
