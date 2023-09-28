@@ -16,12 +16,11 @@ Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las vari
 Paso:
 
 * __Inicio__
-
-* Inicializar las variables __A__,__B__ y __C__
+_
 
 * Leer los valores
 
-* Compribar si los tres valores son iguales 
+* Comprobar si los tres valores no son iguales.
 
 * Si Los valos son Iguales volver al principio
 
@@ -30,6 +29,9 @@ Paso:
 * Si __A > B y A > C__ Entonces
 
 * Escribir __A "Es el Mayor "__
+
+  si b>c
+  B segundo y c es el ultimo
 
 * Sino
 
@@ -134,6 +136,32 @@ Realice un algoritmo que a partir de proporcionarle la velocidad de un automóvi
 
 Paso :
 
+
+## Ejercico 8 <a name="ejercico-8"></a>
+Desarrolle un algoritmo que permita calcular Promedio de Notas; finaliza cuando N = 0.
+
+### Diagrama de Flujo
+
+<img src="images/.drawio.png">
+
+###  Pseudocódigo
+
+Paso :
+
+## Ejercicio 9 <a name="ejercico-9"></a>
+
+
+Muestra los números del 1 al 100 (ambos incluidos). Usa un bucle while.
+
+Haz el mismo ejercicio anterior con un bucle for.
+
+### Diagrama de Flujo
+
+<img src="images/.drawio.png">
+
+###  Pseudocódigo
+
+Paso :
 
 
 </div>
