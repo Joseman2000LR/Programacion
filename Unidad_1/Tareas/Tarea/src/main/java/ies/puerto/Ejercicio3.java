@@ -13,7 +13,7 @@ public class Ejercicio3 {
      */
     public static void main(String[] args) {
         int suma = 0;
-        int h =0;
+        int h = 0;
         // bucle for
         for (int n = 0; n <= 10; n++) {
             suma = n + 1;
@@ -21,9 +21,9 @@ public class Ejercicio3 {
         }
         // bucle while
         while (h <= 10) {
-            suma = i + 1;
+            suma = h + 1;
             System.out.print(suma + "+");
-            i++;
+            h++;
         }
 
     }
