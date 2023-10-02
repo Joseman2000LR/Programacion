@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 /**
  * @author Joseman2000LR
- *         Descripcion del ejercico 8
  */
 public class ejercicio8 {
     /**
