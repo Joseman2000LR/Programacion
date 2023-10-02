@@ -1,4 +1,3 @@
-package ies.puerto;
 
 import java.util.Scanner;
 
@@ -18,26 +17,24 @@ public class Ejercicio {
     public static void main(String[] args) {
         int numero1;
         int numero2;
-        int acumulador = 0;
-        int resultado;
-        int valor0 = 0;
         Scanner lectura = new Scanner(System.in);
-        // hacer mcm
-        System.out.println("dime primer numero");
+        System.out.println("Introduce primer número: ");
         numero1 = lectura.nextInt();
-        // System.out.println("dime segundo numero");
-        // numero2 = lectura.nextInt();
-        while (numero1 >= 1) {
-            if (numero1 / 2 == valor0) {
-                valor0 = 0;
-                System.out.println(valor0);
-                break;
-            } else {
-                acumulador = numero1 / 2;
-                resultado = numero1 / acumulador;
-                numero1 = resultado;
+        System.out.println("Introduce segundo número: ");
+        numero2 = lectura.nextInt();
+
+        System.out.println("Los Numeros perfectos entre " + numero1 + " a " + numero2);
+
+        for (int numero = numero1; numero <= numero2; numero++) {
+            int sumaDivisores = 0;
+            for (int i = 1; i < numero; i++) {
+                if (numero % i == 0) {
+                    sumaDivisores += i;
+                }
             }
-            numero1++;
+            if (sumaDivisores == numero) {
+                System.out.println(numero);
+            }
         }
 
     }
