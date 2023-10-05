@@ -11,12 +11,27 @@ public class Ejercicio3 {
      * @param args
      */
     public static void main(String[] args) {
-        int numero;
-        Scanner lectura = new Scanner(System.in);
-        System.out.println("Introduce  número: ");
-        numero = lectura.nextInt();
-        for (int i = 0; i < numero; i++) {
-            
+        Scanner teclado = new Scanner(System.in);
+        int numero, i, anterio, actual, resultado;
+        System.out.println("Dime un numero ");
+        numero = teclado.nextInt();
+        if (numero <= 0) {
+            System.out.println("El numero tiene que se mayor que 0 ");
+        } else {
+            if (numero >= 1) {
+                System.out.println("0");
+            }
+            if (numero >= 2) {
+                System.out.println("1");
+            }
+            anterio = 0;
+            actual = 1;
+            for (i = 3; i <= numero; i++) {
+                resultado = actual;
+                actual = actual + anterio;
+                anterio = resultado;
+                System.out.println(actual);
+            }
         }
     }
 }
