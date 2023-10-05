@@ -14,23 +14,22 @@ public class Ejercicio4 {
      */
     public static void main(String[] args) {
         int numero;
-        int i;
-        int contador = 0;
-        int resultadoDigito;
+        int original;
+        int inverso = 0;
         Scanner teclado = new Scanner(System.in);
         System.out.println("Dime un numero ");
         numero = teclado.nextInt();
-        // funcion que comprueba los digitos que tiene el numero
-        while (numero != 0) {
-            numero = numero / 10;
-            contador++;
-
+        original = numero;
+        // bucle que desgloza en numero en un digito
+        while (numero > 0) {
+            int digito = numero % 10;
+            inverso = inverso * 10 + digito;
+            numero /= 10;
         }
-        resultadoDigito = numero / contador;
-        System.out.println(contador);
-        System.out.println(resultadoDigito);
-        for (int j = numero; j < numero; j++) {
-
+        if (inverso == original) {
+            System.out.println(original + " es un número palíndromo.");
+        } else {
+            System.out.println(original + " no es un número palíndromo.");
         }
     }
 
