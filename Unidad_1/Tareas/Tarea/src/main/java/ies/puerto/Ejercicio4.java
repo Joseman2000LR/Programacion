@@ -18,7 +18,7 @@ public class Ejercicio4 {
         System.out.println("Introduzca  valor que quieras saber si es par o impar");
         valorN = lectura.nextInt();
         System.out.println("Valor de la variable es  : " + valorN);
-        if (valorN / 2 == 0) {
+        if (valorN % 2 == 0) {
             System.out.println("El numero " + valorN + " es par");
         } else {
             System.out.println("El numero " + valorN + " es impar");
