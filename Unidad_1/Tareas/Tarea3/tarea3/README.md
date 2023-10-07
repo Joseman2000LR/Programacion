@@ -171,7 +171,26 @@ fin
 ## Diagrama de flujos
 
 ## Pseudocódigo
+inico 
+Entero numero
+Entero valor = 0
+Entero original
+Entero cuenta = 0
 
+Escribir "Dime un número"
+Leer numero
+original = numero
+
+// Bucle que desglosa un número
+Mientras numero > 0
+    Entero digito = (numero % 10)
+    Escribir digito
+    digito = original
+    numero = numero / 10
+    cuenta = original + (numero / 10)
+
+Escribir cuenta
+ fin
 ## Referencias
 # Ejercicio7
 
@@ -180,6 +199,35 @@ fin
 ## Diagrama de flujos
 
 ## Pseudocódigo
+Entero numero
+Escribir "Dime un número"
+Leer numero
+
+Según numero Hacer
+    Caso 1:
+        Escribir "Lunes"
+        Detener
+    Caso 2:
+        Escribir "Martes"
+        Detener
+    Caso 3:
+        Escribir "Miércoles"
+        Detener
+    Caso 4:
+        Escribir "Jueves"
+        Detener
+    Caso 5:
+        Escribir "Viernes"
+        Detener
+    Caso 6:
+        Escribir "Sábado"
+        Detener
+    Caso 7:
+        Escribir "Domingo"
+        Detener
+    En otro caso:
+        Escribir "El número introducido no corresponde a un día de la semana:", numero
+Fin Según
 
 ## Referencias
 # Ejercicio8
@@ -189,6 +237,23 @@ fin
 ## Diagrama de flujos
 
 ## Pseudocódigo
+Entero rango
+Entero numero = 1
+Escribir "Dime el rango que quieres"
+Leer rango
+Escribir "Los números perfectos hasta el rango indicado son:"
+
+Para Entero i desde numero hasta rango hacer
+    Entero sumaDivisores = 0
+    Para Entero j desde 1 hasta numero - 1 hacer
+        Si numero % j == 0 entonces
+            sumaDivisores = sumaDivisores + j
+        Fin Si
+    Fin Para
+    Si sumaDivisores == numero entonces
+        Escribir numero
+    Fin Si
+Fin Para
 
 ## Referencias
 # Ejercicio9
@@ -198,6 +263,16 @@ fin
 ## Diagrama de flujos
 
 ## Pseudocódigo
+Entero numero
+Entero resultado
+Escribir "Dime la tabla del número que quieres"
+Leer numero
+Escribir "La tabla del ", numero, " es:"
+
+Para Entero i desde 0 hasta numero hacer
+    resultado = numero *i
+    Escribir i, "*", numero, "=", resultado
+Fin Para
 
 ## Referencias
 # Ejercicio10
@@ -207,6 +282,20 @@ fin
 ## Diagrama de flujos
 
 ## Pseudocódigo
+Entero numero
+Entero contador = 0
+Entero resultado = 0
+Escribir "Dime un número"
+Leer numero
+
+Hacer
+    Si numero % 2 == 0 entonces
+        resultado = numero / 2
+        contador = contador + 1
+    Fin Si
+Mientras contador <= numero
+
+Escribir "La suma de todos los pares hasta ", numero, " es ", resultado
 
 ## Referencias
 </div>
