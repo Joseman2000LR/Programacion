@@ -1,0 +1,16 @@
+package ies.puerto;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class Ejercicio7Test {
+    Ejercicio7 ejercicio7 = new Ejercicio7();
+    @Test
+    public void calcualarLunestestOK() {
+        String resultado ="";
+        String resultadoOk ="Lunes";
+        resultado =ejercicio7.calcularDia(1);
+        Assertions.assertEquals(resultadoOk, resultado ,
+        "No se a obtenido el resultado esperado");
+    }
+}
