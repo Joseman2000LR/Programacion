@@ -1,38 +1,44 @@
 package ies.puerto;
 
+import java.util.Scanner;
+
 public class Ejercicio7 {
     public static void main(String[] args) {
-
+        int dia;
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Dime un numero ");
+        dia = teclado.nextInt();
     }
+
     public String calcularDia(int dia) {
-        String resultado = "Lunes";
+        String resultado = "";
         switch (dia) {
             case 1:
-            resultado = "Lunes";
+                resultado = "Lunes";
                 System.out.println("Lunes");
                 break;
             case 2:
-            resultado = "Martes";
+                resultado = "Martes";
                 System.out.println("Martes");
                 break;
             case 3:
-            resultado = "Miercoles";
+                resultado = "Miercoles";
                 System.out.println("Miercoles");
                 break;
             case 4:
-            resultado = "Jueves";
+                resultado = "Jueves";
                 System.out.println("Jueves");
                 break;
             case 5:
-            resultado = "Viernes";
+                resultado = "Viernes";
                 System.out.println("Viernes");
                 break;
             case 6:
-            resultado = "Sabado";
+                resultado = "Sabado";
                 System.out.println("Sabado");
                 break;
             case 7:
-            resultado = "Domingo";
+                resultado = "Domingo";
                 System.out.println("Domingo");
                 break;
 
@@ -40,6 +46,6 @@ public class Ejercicio7 {
                 System.out.println("El dia introducido no corresponde a dia de la semana" + dia);
                 break;
         }
-       return resultado;
+        return resultado;
     }
 }

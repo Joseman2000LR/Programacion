@@ -1,4 +1,3 @@
-package main.java.ies.puerto;
 
 import java.util.Scanner;
 
