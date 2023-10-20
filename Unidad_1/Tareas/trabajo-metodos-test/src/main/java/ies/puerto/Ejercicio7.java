@@ -15,31 +15,25 @@ public class Ejercicio7 {
         switch (dia) {
             case 1:
                 resultado = "Lunes";
-                System.out.println("Lunes");
                 break;
             case 2:
                 resultado = "Martes";
-                System.out.println("Martes");
                 break;
             case 3:
                 resultado = "Miercoles";
-                System.out.println("Miercoles");
                 break;
             case 4:
                 resultado = "Jueves";
-                System.out.println("Jueves");
                 break;
             case 5:
                 resultado = "Viernes";
-                System.out.println("Viernes");
                 break;
             case 6:
                 resultado = "Sabado";
-                System.out.println("Sabado");
                 break;
             case 7:
                 resultado = "Domingo";
-                System.out.println("Domingo");
+                
                 break;
 
             default:
