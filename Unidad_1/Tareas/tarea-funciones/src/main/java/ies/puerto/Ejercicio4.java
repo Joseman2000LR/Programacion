@@ -4,7 +4,24 @@ public class Ejercicio4 {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
-    public void mayorNumero(int numero1, int numero2) {
-        
+
+    public int mayorNumero(int numero1, int numero2) {
+        int resultado;
+        if (numero1 > numero2) {
+            resultado = numero1;
+        } else {
+            resultado = numero2;
+        }
+        return resultado;
+    }
+
+    public int mayorNumero(int numero1, int numero2, int numero3) {
+        int resultado;
+        if (numero1 > numero2) {
+            resultado = numero1;
+        } else {
+            resultado = numero2;
+        }
+        return resultado;
     }
 }
