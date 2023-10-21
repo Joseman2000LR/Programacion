@@ -1,16 +1,22 @@
 package ies.puerto;
 
 /**
- * Clase que tiene como objetivo realizar
+ * Clase que tiene como objetivo realizar el factorial de un numero.
+ * 
  * @author
  */
 public class Ejercicio1 {
+    /**
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
-
+        System.out.println(" e");
     }
 
     /**
      * Funcion que calcula el factorial de un numero
+     * 
      * @param numero de enttrada del calculo
      * @return resultado de la operacion
      */
@@ -18,7 +24,7 @@ public class Ejercicio1 {
         int resultado = 1;
 
         for (int i = 2; i <= numero; i++) {
-            resultado*=i;
+            resultado *= i;
         }
 
         return resultado;

@@ -2,8 +2,11 @@ package ies.puerto;
 
 import java.util.Scanner;
 
+/**
+ * Clase que tiene como objetivo realizar calcular Palidromo de un numero
+ */
 public class Ejercicio4 {
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         int numero;
         int original;
         int inverso = 0;
@@ -12,8 +15,14 @@ public class Ejercicio4 {
         numero = teclado.nextInt();
         calcularPalidromo(numero);
     }
+
+    /**
+     * 
+     * @param numero
+     * @return
+     */
     public static String calcularPalidromo(int numero) {
-        String resultado="";
+        String resultado = "";
         int original;
         int inverso = 0;
         original = numero;
@@ -24,11 +33,11 @@ public class Ejercicio4 {
             numero /= 10;
         }
         if (inverso == original) {
-            resultado=original+" es un número palíndromo.";
+            resultado = original + " es un número palíndromo.";
         } else {
-            resultado=original+ " no es un número palíndromo.";
+            resultado = original + " no es un número palíndromo.";
         }
-        return  resultado;
+        return resultado;
     }
 
 }
