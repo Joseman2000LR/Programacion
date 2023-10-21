@@ -16,12 +16,7 @@ public class Ejercicio4 {
     }
 
     public int mayorNumero(int numero1, int numero2, int numero3) {
-        int resultado;
-        if (numero1 > numero2) {
-            resultado = numero1;
-        } else {
-            resultado = numero2;
-        }
-        return resultado;
+        int resultado = mayorNumero(numero1, numero2);
+        return mayorNumero(resultado, numero3);
     }
 }

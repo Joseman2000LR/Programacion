@@ -17,8 +17,9 @@ public class Ejercicio4 {
     }
 
     /**
+     * Funcion que calcula palidromo de un numero
      * 
-     * @param numero
+     * @param numero dado para la operacion
      * @return
      */
     public static String calcularPalidromo(int numero) {

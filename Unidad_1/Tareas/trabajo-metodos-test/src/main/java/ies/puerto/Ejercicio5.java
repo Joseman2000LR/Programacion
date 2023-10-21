@@ -18,6 +18,12 @@ public class Ejercicio5 {
         System.out.println(fibonacci(numero));
     }
 
+    /**
+     * Funcion que hace la secuencia fibonacci
+     * 
+     * @param numero
+     * @return
+     */
     public static String fibonacci(int numero) {
         int i, anterio, actual = 0, resultado;
         String devuelve = "";
