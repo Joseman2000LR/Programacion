@@ -1,5 +1,8 @@
 package ies.puerto;
 
+/**
+ * Clase que dice que numero es mayor que otro
+ */
 public class Ejercicio4 {
     public static void main(String[] args) {
         System.out.println("Hello world!");
