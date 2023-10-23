@@ -30,8 +30,5 @@ public class Ejercicio5Test {
         Assertions.assertFalse(resultado);
     }
 
-    @Test
-    public void primoIgualOkTest() {
-
-    }
+  
 }

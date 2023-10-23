@@ -15,9 +15,7 @@ public class Ejercicio3 {
      * @return
      */
     public int areaCuadrado(int a) {
-        int resultado = 0;
-        resultado = (a * a);
-        return resultado;
+        return areaRectangulo(a,a);
     }
 
     /**
@@ -28,8 +26,6 @@ public class Ejercicio3 {
      * @return
      */
     public int areaRectangulo(int a, int b) {
-        int resultado = 0;
-        resultado = (a * b);
-        return resultado;
+        return (a * b);
     }
 }

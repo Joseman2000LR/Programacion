@@ -9,12 +9,10 @@ public class Ejercicio4 {
     }
 
     public int mayorNumero(int numero1, int numero2) {
-        int resultado;
-        if (numero1 > numero2) {
-            resultado = numero1;
-        } else {
+        int resultado = numero1 ;
+        if (numero1 < numero2) {
             resultado = numero2;
-        }
+        } 
         return resultado;
     }
 

@@ -23,8 +23,8 @@ public class Ejercicio5 {
             return false;
         }
 
-        for (int i = 5; i * i <= numero; i += 6) {
-            if (numero % i == 0 || numero % (i + 2) == 0) {
+        for (int i = 2; i  <= numero/2; i += 6) {
+            if (numero % i == 0 ) {
                 return false;
             }
         }

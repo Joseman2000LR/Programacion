@@ -12,29 +12,24 @@ public class Ejercicio4Test {
         int numero2 = 1;
         int resultadoOk = 2;
         int resultado;
-        resultado = ejercicio4.mayorNumero(numero1, numero2);
-        Assertions.assertEquals(resultado, resultadoOk, "");
+        resultado = ejercicio4.mayorNumero(1, 2);
+        Assertions.assertEquals(resultado, resultadoOk, "no se ha obtenido el resultado corecto");
     }
 
     @Test
     public void mayorSegundoNumero() {
-        int numero1 = 1;
-        int numero2 = 2;
         int resultadoOk = 2;
         int resultado;
-        resultado = ejercicio4.mayorNumero(numero1, numero2);
-        Assertions.assertEquals(resultado, resultadoOk, "");
+        resultado = ejercicio4.mayorNumero(1, 2);
+        Assertions.assertEquals(resultado, resultadoOk, "no se ha obtenido el resultado corecto");
     }
 
     @Test
     public void mayorTerceroNumero() {
-        int numero1 = 1;
-        int numero2 = 2;
-        int numero3 = 3;
         int resultadoOk = 3;
         int resultado;
-        resultado = ejercicio4.mayorNumero(numero1, numero2, numero3);
-        Assertions.assertEquals(resultado, resultadoOk, "ee");
+        resultado = ejercicio4.mayorNumero(1, 2, 3);
+        Assertions.assertEquals(resultado, resultadoOk, "no se ha obtenido el resultado corecto");
     }
 
 }

@@ -18,9 +18,8 @@ public class Ejercicio1 {
      * @return
      */
     public int areaTriangulo(int base, int altura) {
-        int resultado = 0;
-        resultado = (base * altura) / 2;
-        return resultado;
+        
+        return  (base * altura) / 2;
     }
 
 }

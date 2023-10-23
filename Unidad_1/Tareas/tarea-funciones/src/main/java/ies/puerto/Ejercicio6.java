@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Ejercicio6 {
 
     /**
-     * función que convierte de grados Fahrenheit a Celsius
+     * funcion que convierte de grados Fahrenheit a Celsius
      * 
      * @param gradosFahrenheit
      * @return
