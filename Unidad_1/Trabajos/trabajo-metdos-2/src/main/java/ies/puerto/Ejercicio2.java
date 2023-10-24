@@ -9,8 +9,8 @@ public class Ejercicio2 {
     /**
      * Funcion que verifica si es positivo o negativo
      * 
-     * @param numero
-     * @return
+     * @param numero variable de entrada
+     * @return true/false
      */
     public boolean verificacionNumero(double numero) {
         boolean resultado;
@@ -27,8 +27,8 @@ public class Ejercicio2 {
     /**
      * Funcion que es el numero es par o impar
      * 
-     * @param numero
-     * @return
+     * @param numero variable de entrada
+     * @return true/false
      */
     public boolean parImpar(double numero) {
         boolean resultado;
