@@ -32,4 +32,13 @@ public class Ejercicio3 {
         suma = numero1 + numero2 + numero3 + numero4 + numero5;
         return suma;
     }
+
+    public void ordenarMayorMenor() {
+
+    }
+
+    public void ordenarMenorMayor() {
+
+    }
+
 }
