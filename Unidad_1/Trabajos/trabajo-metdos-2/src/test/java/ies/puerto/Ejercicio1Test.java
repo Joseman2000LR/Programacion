@@ -9,8 +9,14 @@ public class Ejercicio1Test {
 
     @Test
     public void calcularSueldoHorasOkTest(){
-        int resultado = ejercicio1.calcularSueldoHoras(10);
+        double resultado = ejercicio1.calcularSueldoHoras(10);
         Assertions.assertEquals(100, resultado,"no se ha obtenido el resultado correpodiente");
+
+    }
+    @Test
+    public void calcularSueldoHoras205OkTest(){
+        double resultado = ejercicio1.calcularSueldoHoras(20.5f);
+        Assertions.assertEquals(205, resultado,"no se ha obtenido el resultado correpodiente");
 
     }
 }

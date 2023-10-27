@@ -13,10 +13,9 @@ public class Ejercicio1 {
      * @param numerohoras parametro de entrada
      * @return sueldo
      */
-    public int calcularSueldoHoras(int numerohoras) {
-        int sueldo = 0;
-        int HorasPagadas = 10;
-        sueldo = numerohoras * HorasPagadas;
+    public double calcularSueldoHoras(double numerohoras) {
+        double sueldo = 0;
+        sueldo = numerohoras * 10;
         return sueldo;
     }
 }

@@ -1,8 +1,5 @@
 package ies.puerto;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import java.util.Arrays;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +28,49 @@ public class Ejercicio3Test {
         int[] numeros = { 1, 2, 3, 4, 5 };
         String resultadoOrdenado = ejercicio3.ordenarMenorMayor(numeros);
         Assertions.assertEquals(resultado, resultadoOrdenado, "no se a podido obtener  el resultado correcto");
+    }
+
+    @Test
+    public void ordenarMayorMenorNumeroV1OkTest() {
+        int resultado = 5;
+        int resultadoOrdendo = ejercicio3.ordenarMayorMenorNumero(4, 5);
+        Assertions.assertEquals(resultado, resultadoOrdendo, "no se a podido obtener  el resultado correcto");
+    }
+
+    @Test
+    public void ordenarMayorMenorNumeroV2OkTest() {
+        int resultado = 5;
+        int resultadoOrdendo = ejercicio3.ordenarMayorMenorNumero(5, 4);
+        Assertions.assertEquals(resultado, resultadoOrdendo, "no se a podido obtener  el resultado correcto");
+    }
+
+    @Test
+    public void ordenarMayorMenorNumeroV3OkTest() {
+        int resultado = 6;
+        int resultadoOrdendo = ejercicio3.ordenarMayorMenorNumero(5, 4, 6);
+        Assertions.assertEquals(resultado, resultadoOrdendo, "no se a podido obtener  el resultado correcto");
+    }
+
+    @Test
+    public void ordenarMenorMayorNumeroV1OkTest() {
+        int resultado = 4;
+        int resultadoOrdendo = ejercicio3.ordenarMenorMayorNumero(4, 5);
+        Assertions.assertEquals(resultado, resultadoOrdendo, "no se a podido obtener  el resultado correcto");
+    }
+
+    @Test
+    public void ordenarMenorMayorNumeroV2OkTest() {
+        int resultado = 4;
+        int resultadoOrdendo = ejercicio3.ordenarMenorMayorNumero(5, 4);
+        Assertions.assertEquals(resultado, resultadoOrdendo, "no se a podido obtener  el resultado correcto");
+    }
+
+    @Test
+    public void mostarOkTest() {
+        String resultado = " 123";
+        String resultadoOrdenado = ejercicio3.mostar(1, 2, 3);
+        Assertions.assertEquals(resultado, resultadoOrdenado, "no se a obtenido el valor indicado");
+
     }
 
 }

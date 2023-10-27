@@ -79,5 +79,79 @@ public class Ejercicio3 {
         }
         return resultado;
     }
+    /**
+     * Funcion que ordena una  de numeros de menor a mayor
+     * 
+     * @param numeros  de numeros a ordenar
+     * @return resultado que es String que concaderna lo que contiene la lista
+     */
+    public static int ordenarMayorMenorNumero(int numero1 , int numero2 ) {
+       int resultado =numero1;
+       if(numero2>numero1){
+        resultado=numero2;
+       }
+       return resultado;
+    }
+
+     /**
+     * Funcion que ordena una  de numeros de menor a mayor
+     * 
+     * @param numeros  de numeros a ordenar
+     * @return resultado que es String que concaderna lo que contiene la lista
+     */
+    public static int ordenarMayorMenorNumero(int numero1 , int numero2,int numero3) {
+       int resultado =ordenarMayorMenorNumero(numero1,numero2);
+       resultado =ordenarMayorMenorNumero(resultado,numero3);
+       return resultado;
+
+    }
+
+    /**
+     * Funcion que ordena una  de numeros de
+     * 
+     * @param numeros  de numeros a ordenar
+     * @return resultado que es String que concaderna lo que contiene la lista
+     */
+    public static int ordenarMenorMayorNumero(int numero1 , int numero2 ) {
+       int resultado =numero1;
+       if(numero2<numero1){
+        resultado=numero2;
+       }
+       return resultado;
+    }
+
+    /** Funcion que ordena una  de numeros de menor a mayor
+     * 
+     * @param numeros  de numeros a ordenar
+     * @return resultado que es String que concaderna lo que contiene la lista
+     */
+    public static int ordenarMenorMayorNumero(int numero1 , int numero2,int numero3) {
+       int resultado =ordenarMayorMenorNumero(numero1,numero2);
+       resultado =ordenarMayorMenorNumero(resultado,numero3);
+       return resultado;
+
+    }
+
+
+// falta hacer test y documentar
+
+    public static String mostar(int numero1 , int numero2,int numero3){
+        String resultado="";
+        int valorMenor=ordenarMenorMayorNumero(numero1,numero2,numero3);
+        int valorMayor=ordenarMayorMenorNumero(numero1,numero2,numero3);
+        int intermedio=suma(numero1,numero2,numero3)-valorMayor-valorMenor;
+        resultado=" "+valorMenor+intermedio+valorMayor;
+        return  resultado;
+    }
+    public static int suma(int numero1 , int numero2){
+        int resultado;
+        
+        return resultado=numero1+numero2;
+    }
+    public static int suma(int numero1 , int numero2,int numero3){
+        int resultado=suma(numero1,numero2);
+        resultado=suma(resultado,numero3);
+        return resultado;
+    }
 
 }
