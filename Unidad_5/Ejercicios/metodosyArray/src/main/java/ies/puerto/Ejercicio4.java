@@ -1,10 +1,12 @@
 package ies.puerto;
 
 public class Ejercicio4 {
-    public static void main(String[] args) {
 
-    }
-
+    /**
+     * Metodo que busca los numeros pares de una lista
+     * 
+     * @return
+     */
     public String buscarPares() {
         String resultado = "";
         int primos;
@@ -19,6 +21,12 @@ public class Ejercicio4 {
         return resultado;
     }
 
+    /**
+     * Metodo que verifica el el numero dado es par o impar
+     * 
+     * @param numero dado por el usuario
+     * @return true si es par y si es false es impar
+     */
     public static boolean esPar(int numero) {
 
         if (numero % 2 == 0) {
@@ -28,6 +36,11 @@ public class Ejercicio4 {
         return false;
     }
 
+    /**
+     * Metodo que muestra el resultado
+     * 
+     * @param resultado
+     */
     public static void mostarResultado(String resultado) {
         System.out.println(resultado);
     }

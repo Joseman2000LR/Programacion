@@ -5,7 +5,11 @@ package ies.puerto;
  * flotante.
  */
 public class Ejercicio2 {
-
+    /**
+     * Metodo que calcula el promedio de los numeros que tiene una lista
+     * 
+     * @return
+     */
     public float calcularPromedio() {
         float suma = 0;
         float promedio;

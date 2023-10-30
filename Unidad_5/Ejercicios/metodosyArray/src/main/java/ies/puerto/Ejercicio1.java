@@ -10,7 +10,9 @@ public class Ejercicio1 {
     }
 
     /**
+     * metodo que calcul la suma de todos los numero que tiene una lista
      * 
+     * @return
      */
     public int calcularSuma() {
         int sumar = 0;
@@ -22,6 +24,12 @@ public class Ejercicio1 {
         return sumar;
     }
 
+    /**
+     * metodo que muestra el resultado de la suma
+     * 
+     * @param sumar
+     * @return
+     */
     public static String mostrarResultado(int sumar) {
         String resultado = "La suma de los elementos es: ";
         return resultado + sumar;
