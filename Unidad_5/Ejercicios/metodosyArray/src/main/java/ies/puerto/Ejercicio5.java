@@ -5,6 +5,9 @@ package ies.puerto;
  * está presente
  */
 public class Ejercicio5 {
+    public static void main(String[] args) {
+
+    }
 
     /**
      * Metodo que busca un numero dado y indica en que posision esta ese numero

@@ -47,4 +47,36 @@ public class Ejercicio3 {
         return resultado;
     }
 
+    /***
+     * Metodo que te dice el valor mayor de una lista
+     * 
+     * @return
+     */
+    public int mayor() {
+        int[] array = { 1, 2, 3, 4, 5 };
+        int mayor = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > mayor) {
+                mayor = array[1];
+            }
+        }
+        return mayor;
+    }
+
+    /**
+     * metodo que te dice el valor menor de una lista
+     * 
+     * @return
+     */
+    public int menor() {
+        int[] array = { 1, 2, 3, 4, 5 };
+        int menor = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < menor) {
+                menor = array[1];
+            }
+        }
+        return menor;
+    }
+
 }
