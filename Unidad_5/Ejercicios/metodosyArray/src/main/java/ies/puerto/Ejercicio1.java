@@ -5,9 +5,7 @@ package ies.puerto;
  * enteros.
  */
 public class Ejercicio1 {
-    public static void main(String[] args) {
-
-    }
+    
 
     /**
      * metodo que calcul la suma de todos los numero que tiene una lista

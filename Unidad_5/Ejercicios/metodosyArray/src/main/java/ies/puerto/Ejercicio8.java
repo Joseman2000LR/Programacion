@@ -3,17 +3,7 @@ package ies.puerto;
 public class Ejercicio8 {
     public static void main(String[] args) {
         int[] array = { 1, 2, 2, 3, 4, 4, 5, 6, 6 };
-        System.out.print("Valores iniciales del array: ");
-        for (int valor : array) {
-            System.out.print(valor + " ");
-        }
-        System.out.println();
         int[] resultado = eliminarDuplicados(array);
-
-        System.out.print("Resultado final: ");
-        for (int valor : resultado) {
-            System.out.print(valor + " ");
-        }
     }
 
     public static int[] eliminarDuplicados(int[] array) {
