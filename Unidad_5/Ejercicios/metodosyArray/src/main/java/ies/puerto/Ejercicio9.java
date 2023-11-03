@@ -10,7 +10,7 @@ public class Ejercicio9 {
 
     }
 
-    public static void combinarArry(int[] numero1, int[] numero2) {
+    public static int[] combinarArry(int[] numero1, int[] numero2) {
         int[] combinar = new int[numero1.length + numero2.length];
 
         for (int i = 0; i < numero1.length + numero2.length; i++) {
@@ -21,11 +21,10 @@ public class Ejercicio9 {
         }
         ordenarMenorMayor(combinar);
 
-        System.out.println("Copia del array original:");
         for (int elemento : combinar) {
             System.out.print(elemento + " ");
         }
-
+        return combinar;
     }
 
     /**
