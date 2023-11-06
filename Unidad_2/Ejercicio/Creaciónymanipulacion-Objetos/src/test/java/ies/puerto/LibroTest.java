@@ -11,7 +11,7 @@ public class LibroTest {
     public void LibroTest() {
         libro.setTitulo("java");
         libro.setAnioPublicacion("15:01:4500");
-        String resultado = "Titulo : " + "java" + " " + "Anio de publicacion " + "15:01:4500 ";
+        String resultado = "Titulo : " + "java" + " " + "Anio de publicacion " + "15:01:4500";
         Assertions.assertEquals(resultado, libro.imprimirLibro(), "no se a podido obtener el valor indicado");
     }
 

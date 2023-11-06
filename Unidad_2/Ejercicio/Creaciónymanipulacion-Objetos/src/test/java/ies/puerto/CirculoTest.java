@@ -13,4 +13,13 @@ public class CirculoTest {
         String resultado = "radio= " + 2;
         Assertions.assertEquals(resultado, circulo.toString());
     }
+
+    @Test
+    public void calcularArea() {
+        int radio = 5;
+        double resultado = 78.5;
+        double resultadoOk;
+        resultadoOk = circulo.calcularArea(radio);
+        Assertions.assertEquals(resultado, resultadoOk, "El valor obtenido no es el esperado");
+    }
 }

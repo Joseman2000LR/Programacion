@@ -63,12 +63,10 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "{" +
-                " nombre='" + getNombre() + "'" +
+        return "nombre='" + getNombre() + "'" +
                 ", edad='" + getEdad() + "'" +
                 ", carreta='" + getCarreta() + "'" +
-                ", promedio='" + getPromedio() + "'" +
-                "}";
+                ", promedio='" + getPromedio() + "'";
     }
 
 }

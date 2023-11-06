@@ -11,6 +11,12 @@ public class Circulo {
         this.radio = radio;
     }
 
+    public double calcularArea(int radio) {
+        double area;
+        area = 3.14 * (radio * radio);
+        return area;
+    }
+
     public int getRadio() {
         return this.radio;
     }
