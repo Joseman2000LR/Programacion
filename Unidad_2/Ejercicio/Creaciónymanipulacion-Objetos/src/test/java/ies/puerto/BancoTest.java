@@ -50,4 +50,13 @@ public class BancoTest {
         Assertions.assertEquals(resultado, resultadoOk, "El valor no es el correcto ");
     }
 
+    @Test
+    public void retirar3DepositoTest() {
+        double[] saldoBanco = { 10 };
+        double sacarrdinero = 10;
+        banco2.realizarDeposito(sacarrdinero);
+        String resultado = "" + 0.0;
+        String resultadoOk = banco2.retirarDeposito(sacarrdinero);
+        Assertions.assertEquals(resultado, resultadoOk, "El valor no es el correcto ");
+    }
 }
