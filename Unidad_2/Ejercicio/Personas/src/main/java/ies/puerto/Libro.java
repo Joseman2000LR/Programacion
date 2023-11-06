@@ -15,6 +15,15 @@ public class Libro {
         this.anioPublicacion = anioPublicacion;
     }
 
+    /**
+     * metodo que retona String
+     * 
+     * @return
+     */
+    public String imprimirLibro() {
+        return "Titulo : " + getTitulo() + " " + "Anio de publicacion " + getAnioPublicacion();
+    }
+
     public String getTitulo() {
         return this.titulo;
     }
@@ -25,10 +34,6 @@ public class Libro {
 
     public String getAutor() {
         return this.autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
     }
 
     public String getAnioPublicacion() {
