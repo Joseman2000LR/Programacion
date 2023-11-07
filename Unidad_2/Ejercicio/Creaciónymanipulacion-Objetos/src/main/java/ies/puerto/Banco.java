@@ -16,6 +16,12 @@ public class Banco {
         this.saldo = saldo;
     }
 
+    /**
+     * metodo que realiza ingresa un valor y suma el valor en un una lista
+     * 
+     * @param ingresardinero
+     * @return
+     */
     public static String realizarDeposito(double ingresardinero) {
         String resultado;
         double suma;
@@ -24,6 +30,12 @@ public class Banco {
         return resultado;
     }
 
+    /**
+     * metodo que realiza retirada un valor y resta el valor en un una lista
+     * 
+     * @param sacarrdinero
+     * @return
+     */
     public static String retirarDeposito(double sacarrdinero) {
         String resultado;
         if (saldo[0] <= 0) {
@@ -37,6 +49,12 @@ public class Banco {
         return resultado;
     }
 
+    /**
+     * metodo que muestra el total de elemento que tiene una lista
+     * 
+     * @param valorEntrada
+     * @return
+     */
     public static String mostarSaldo(String valorEntrada) {
         String resultado;
         resultado = "El saldo actual es de " + valorEntrada;

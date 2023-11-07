@@ -11,6 +11,12 @@ public class Circulo {
         this.radio = radio;
     }
 
+    /**
+     * metodo que realiza el area de un circulo
+     * 
+     * @param radio
+     * @return
+     */
     public double calcularArea(int radio) {
         double area;
         area = 3.14 * (radio * radio);
