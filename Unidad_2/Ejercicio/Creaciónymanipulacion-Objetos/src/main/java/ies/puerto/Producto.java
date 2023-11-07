@@ -1,11 +1,12 @@
 package ies.puerto;
 
 public class Producto {
-    private String nombre;
-    private double precio;
-    private int stock;
+    String nombre;
+    double precio;
+    int stock;
 
     public Producto() {
+
     }
 
     public Producto(String nombre, double precio, int stock) {
