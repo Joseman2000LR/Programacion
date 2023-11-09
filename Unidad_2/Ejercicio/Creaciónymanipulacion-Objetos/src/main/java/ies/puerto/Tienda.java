@@ -3,20 +3,37 @@ package ies.puerto;
 import java.util.List;
 
 public class Tienda {
+    Producto producto;
     private List<Producto> inventario;
 
     public Tienda() {
 
     }
 
+    public Tienda(Producto producto) {
+        this.producto = producto;
+    }
+
     public Tienda(List<Producto> inventario) {
         this.inventario = inventario;
     }
 
+    /**
+     * Metodo que agrega a una lista un objecto
+     * 
+     * @param producto
+     */
     public void agregarProducto(Producto producto) {
         inventario.add(producto);
     }
 
+    /**
+     * Metodo que elimina la cantidad de un producto en una lista
+     * 
+     * @param nombreProducto
+     * @param cantidad
+     * @return
+     */
     public String venderProducto(String nombreProducto, int cantidad) {
         String venta;
         for (Producto producto : inventario) {
@@ -33,6 +50,11 @@ public class Tienda {
         return venta = nombreProducto + " no se encontró en el inventario.";
     }
 
+    /**
+     * metodo que muestra la lista
+     * 
+     * @return
+     */
     public String mostrarInventario() {
         String mostar = "";
         if (inventario.isEmpty()) {

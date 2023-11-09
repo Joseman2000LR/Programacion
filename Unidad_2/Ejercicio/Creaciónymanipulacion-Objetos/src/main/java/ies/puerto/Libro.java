@@ -9,6 +9,12 @@ public class Libro {
 
     }
 
+    /***
+     * Contrutor de la clase con todos los paramentro
+     * @param titulo del libro
+     * @param autor del libro
+     * @param anioPublicacion del libro
+     */
     public Libro(String titulo, String autor, String anioPublicacion) {
         this.titulo = titulo;
         this.autor = autor;
