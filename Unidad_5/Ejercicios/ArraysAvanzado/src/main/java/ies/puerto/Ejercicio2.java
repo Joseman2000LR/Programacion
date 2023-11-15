@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Ejercicio2 {
 
-    ArrayList<Integer> elementos = new ArrayList<Integer>();
+    int[] elemento = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
     public Ejercicio2() {
 
@@ -22,16 +22,16 @@ public class Ejercicio2 {
      * @param elementos
      */
 
-    public Ejercicio2(ArrayList<Integer> elementos) {
-        this.elementos = elementos;
+    public Ejercicio2(int[] elemento) {
+        this.elemento = elemento;
     }
 
-    public ArrayList<Integer> getelementos() {
-        return this.elementos;
+    public int[] getElemento() {
+        return this.elemento;
     }
 
-    public void setelementos(ArrayList<Integer> elementos) {
-        this.elementos = elementos;
+    public void setElemento(int[] elemento) {
+        this.elemento = elemento;
     }
 
     /**
@@ -40,15 +40,15 @@ public class Ejercicio2 {
      * @param elementos
      * @return
      */
-    public ArrayList<Integer> insertarNumero(ArrayList<Integer> elementos) {
+    public int[] insertarNumero(int[] elemento) {
         Scanner lectura = new Scanner(System.in);
         int valor = 0;
-        for (int i = 0; i < elementos.size() | valor < 0; i++) {
+        for (int i = 0; i < elemento.length | valor < 0; i++) {
             System.out.println("dime la nota");
             valor = lectura.nextInt();
-            valor = elementos.get(i);
+            valor = elemento[i];
         }
-        return elementos;
+        return elemento;
     }
 
     /**
@@ -57,10 +57,10 @@ public class Ejercicio2 {
      * @param elementos
      * @return
      */
-    public String mostarLista(ArrayList<Integer> elementos) {
+    public String mostarLista(int[] elemento) {
         String resultado = "";
-        for (int i = 0; i < elementos.size(); i++) {
-            resultado = " " + elementos.get(i);
+        for (int i = 0; i < elemento.length; i++) {
+            resultado = " " + elemento[i];
         }
         return resultado;
     }

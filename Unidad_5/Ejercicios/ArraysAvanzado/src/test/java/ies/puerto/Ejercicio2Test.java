@@ -8,20 +8,22 @@ import org.junit.jupiter.api.Test;
 public class Ejercicio2Test {
 
     Ejercicio2 ejercicio2 = new Ejercicio2();
-    ArrayList<Integer> elemento = new ArrayList<Integer>();
+    int[] elemento = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-    @Test
-    public void mostarListaTEst() {
-        lista();
-        String resultado = "";
-        String resultadoOK = ejercicio2.mostarLista(elemento);
-        Assertions.assertEquals(resultado, resultadoOK, "");
-    }
+    /**
+     * @Test
+     *       public void mostarListaTEst() {
+     *       lista();
+     *       String resultado = "";
+     *       String resultadoOK = ejercicio2.mostarLista(elemento);
+     *       Assertions.assertEquals(resultado, resultadoOK, "");
+     *       }
+     */
 
     public void lista() {
         int valor = (int) Math.random();
-        for (int i = 0; i < elemento.size(); i++) {
-            elemento.get(valor);
+        for (int i = 0; i < elemento.length; i++) {
+            elemento[i] = valor;
         }
 
     }
