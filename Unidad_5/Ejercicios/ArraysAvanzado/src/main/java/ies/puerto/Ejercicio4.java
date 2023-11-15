@@ -10,4 +10,56 @@ package ies.puerto;
  */
 public class Ejercicio4 {
 
+    /**
+     * 
+     * @return
+     */
+    public static int[][] ingresarElemento() {
+        int[][] matriz;
+        matriz = new int[5][5];
+        int valor;
+        // para columna
+        for (int i = 0; i < matriz.length; i++) {
+            valor = (int) Math.floor(Math.random() * 10 + 1);
+            matriz[i][0] = valor;
+
+        }
+        // para fila
+        for (int i = 0; i < matriz.length; i++) {
+            valor = (int) Math.floor(Math.random() * 10 + 1);
+            matriz[0][i] = valor;
+
+        }
+        return matriz;
+    }
+
+    /**
+     * 
+     * @param matriz
+     * @return
+     */
+    public String sumarElementos(int[][] matriz) {
+        int sumaColumna = 0;
+        int sumaFila = 0;
+        String resultado = "";
+        // para columna
+        for (int i = 0; i < matriz.length; i++) {
+            sumaColumna += matriz[i][0];
+        }
+        // para fila
+        for (int i = 0; i < matriz.length; i++) {
+            sumaFila += matriz[0][i];
+        }
+        return resultado = "La suma de la columna es " + sumaColumna + " y de la fila es " + sumaFila;
+
+    }
+
+    /**
+     * 
+     * @param valor
+     */
+    public void imprimir(String valor) {
+        System.out.println(valor);
+    }
+
 }
