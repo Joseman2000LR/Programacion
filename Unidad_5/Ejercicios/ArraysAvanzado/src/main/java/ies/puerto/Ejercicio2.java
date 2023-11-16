@@ -1,6 +1,5 @@
 package ies.puerto;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -10,7 +9,7 @@ import java.util.Scanner;
  */
 public class Ejercicio2 {
 
-    int[] elemento = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    int[] elemento = new int[10];
 
     public Ejercicio2() {
 
@@ -40,15 +39,26 @@ public class Ejercicio2 {
      * @param elementos
      * @return
      */
-    public int[] insertarNumero(int[] elemento) {
+    public void insertarNumero(int[] elemento) {
         Scanner lectura = new Scanner(System.in);
         int valor = 0;
-        for (int i = 0; i < elemento.length | valor < 0; i++) {
-            System.out.println("dime la nota");
+        int i = 0;
+        boolean salir = false;
+        do {
+            System.out.println("dime la nota" + (i + 1));
+            valor = lectura.nextInt();
+            if (valor < 0) {
+                salir = true;
+                elemento[i] = valor;
+            } else {
+                elemento[i] = valor;
+                i++;
+            }
             valor = lectura.nextInt();
             valor = elemento[i];
-        }
-        return elemento;
+        } while (i < elemento.length && !salir);
+        mostarLista(elemento, i);
+
     }
 
     /**
@@ -57,12 +67,10 @@ public class Ejercicio2 {
      * @param elementos
      * @return
      */
-    public String mostarLista(int[] elemento) {
-        String resultado = "";
-        for (int i = 0; i < elemento.length; i++) {
-            resultado = " " + elemento[i];
+    public void mostarLista(int[] elemento, int total) {
+        for (int i = 0; i < total; i++) {
+            System.out.println(" " + elemento[i]);
         }
-        return resultado;
     }
 
 }
