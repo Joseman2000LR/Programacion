@@ -9,5 +9,39 @@ package ies.puerto;
  * Muestra el contenido de la tabla en pantalla.
  */
 public class Ejercicio5 {
+    int[][] diagonal = new int[5][5];
+
+    /**
+     * 
+     * @param diagonal
+     * @return
+     */
+    public int[][] matrizDiaonal(int[][] diagonal) {
+        int uno = 1;
+        int cero = 0;
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (i == j) {
+                    diagonal[i][j] = 1;
+                } else {
+                    diagonal[i][j] = 0;
+                }
+            }
+        }
+        return diagonal;
+    }
+
+    /**
+     * 
+     * @param diagonal
+     */
+    public void imprimir(int[][] diagonal) {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(diagonal[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 
 }
