@@ -10,11 +10,11 @@ import java.util.Scanner;
  */
 public class Ejercicio2 {
 
-<span class="pc" id="L13">    ArrayList&lt;Integer&gt; elementos = new ArrayList&lt;Integer&gt;();</span>
+<span class="nc" id="L13">    int[] elemento = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };</span>
 
-<span class="fc" id="L15">    public Ejercicio2() {</span>
+<span class="nc" id="L15">    public Ejercicio2() {</span>
 
-<span class="fc" id="L17">    }</span>
+<span class="nc" id="L17">    }</span>
 
     /**
      * Contrutor con el elemento de la lista
@@ -22,16 +22,16 @@ public class Ejercicio2 {
      * @param elementos
      */
 
-<span class="nc" id="L25">    public Ejercicio2(ArrayList&lt;Integer&gt; elementos) {</span>
-<span class="nc" id="L26">        this.elementos = elementos;</span>
+<span class="nc" id="L25">    public Ejercicio2(int[] elemento) {</span>
+<span class="nc" id="L26">        this.elemento = elemento;</span>
 <span class="nc" id="L27">    }</span>
 
-    public ArrayList&lt;Integer&gt; getelementos() {
-<span class="nc" id="L30">        return this.elementos;</span>
+    public int[] getElemento() {
+<span class="nc" id="L30">        return this.elemento;</span>
     }
 
-    public void setelementos(ArrayList&lt;Integer&gt; elementos) {
-<span class="nc" id="L34">        this.elementos = elementos;</span>
+    public void setElemento(int[] elemento) {
+<span class="nc" id="L34">        this.elemento = elemento;</span>
 <span class="nc" id="L35">    }</span>
 
     /**
@@ -40,15 +40,15 @@ public class Ejercicio2 {
      * @param elementos
      * @return
      */
-    public ArrayList&lt;Integer&gt; insertarNumero(ArrayList&lt;Integer&gt; elementos) {
+    public int[] insertarNumero(int[] elemento) {
 <span class="nc" id="L44">        Scanner lectura = new Scanner(System.in);</span>
 <span class="nc" id="L45">        int valor = 0;</span>
-<span class="nc bnc" id="L46" title="All 6 branches missed.">        for (int i = 0; i &lt; elementos.size() | valor &lt; 0; i++) {</span>
+<span class="nc bnc" id="L46" title="All 6 branches missed.">        for (int i = 0; i &lt; elemento.length | valor &lt; 0; i++) {</span>
 <span class="nc" id="L47">            System.out.println(&quot;dime la nota&quot;);</span>
 <span class="nc" id="L48">            valor = lectura.nextInt();</span>
-<span class="nc" id="L49">            valor = elementos.get(i);</span>
+<span class="nc" id="L49">            valor = elemento[i];</span>
         }
-<span class="nc" id="L51">        return elementos;</span>
+<span class="nc" id="L51">        return elemento;</span>
     }
 
     /**
@@ -57,12 +57,12 @@ public class Ejercicio2 {
      * @param elementos
      * @return
      */
-    public String mostarLista(ArrayList&lt;Integer&gt; elementos) {
-<span class="fc" id="L61">        String resultado = &quot;&quot;;</span>
-<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        for (int i = 0; i &lt; elementos.size(); i++) {</span>
-<span class="nc" id="L63">            resultado = &quot; &quot; + elementos.get(i);</span>
+    public String mostarLista(int[] elemento) {
+<span class="nc" id="L61">        String resultado = &quot;&quot;;</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        for (int i = 0; i &lt; elemento.length; i++) {</span>
+<span class="nc" id="L63">            resultado = &quot; &quot; + elemento[i];</span>
         }
-<span class="fc" id="L65">        return resultado;</span>
+<span class="nc" id="L65">        return resultado;</span>
     }
 
 }

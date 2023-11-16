@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Programa que declare un arrat de diez elementos enteros y pida números para
+ * Programa que declare un array de diez elementos enteros y pida números para
  * rellenarlo hasta que se llene el vector o se introduzca un número negativo.
  * Entonces se debe imprimir el array (sólo los elementos introducidos).
  */

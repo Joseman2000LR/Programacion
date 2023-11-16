@@ -10,81 +10,19 @@ import java.util.Scanner;
  * que ha sacado y la menor.
  */
 public class Ejercicio1 {
-    int nota1;
-    int nota2;
-    int nota3;
-    int nota4;
-    int nota5;
-    ArrayList<Integer> notas = new ArrayList<Integer>();
 
-    public Ejercicio1() {
-
-    }
-
-    /**
-     * Contrutor con las 5 notas
-     * 
-     * @param nota1
-     * @param nota2
-     * @param nota3
-     * @param nota4
-     * @param nota5
-     * @param notas
-     */
-    public Ejercicio1(int nota1, int nota2, int nota3, int nota4, int nota5) {
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
-        this.nota4 = nota4;
-        this.nota5 = nota5;
-    }
-
-    public int getNota1() {
-        return this.nota1;
-    }
-
-    public void setNota1(int nota1) {
-        this.nota1 = nota1;
-    }
-
-    public int getNota2() {
-        return this.nota2;
-    }
-
-    public void setNota2(int nota2) {
-        this.nota2 = nota2;
-    }
-
-    public int getNota3() {
-        return this.nota3;
-    }
-
-    public void setNota3(int nota3) {
-        this.nota3 = nota3;
-    }
-
-    public int getNota4() {
-        return this.nota4;
-    }
-
-    public void setNota4(int nota4) {
-        this.nota4 = nota4;
-    }
-
-    public int getNota5() {
-        return this.nota5;
-    }
-
-    public void setNota5(int nota5) {
-        this.nota5 = nota5;
-    }
-
+    
     /**
      * 
      * @param notas
      * @return
      */
     public ArrayList<Integer> ingresarNota(ArrayList<Integer> notas) {
+        int nota1;
+        int nota2;
+        int nota3;
+        int nota4;
+        int nota5;
         Scanner lectura = new Scanner(System.in);
         System.out.println("dime la nota");
         nota1 = lectura.nextInt();

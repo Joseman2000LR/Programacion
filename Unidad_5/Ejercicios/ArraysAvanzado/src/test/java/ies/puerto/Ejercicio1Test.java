@@ -13,7 +13,7 @@ public class Ejercicio1Test {
     @Test
     public void mostarNotasTest() {
         listaNota();
-        String resultado = " 5 4 6 0 9";
+        String resultado = " 5 8 6 4 0 9";
         String resultadoOK = ejercicio1.mostarNotas(notas);
         Assertions.assertEquals(resultado, resultadoOK, "No se a obtenido el valor indicado");
     }
@@ -21,7 +21,7 @@ public class Ejercicio1Test {
     @Test
     public void notaMediaTest() {
         listaNota();
-        int resultado = 4;
+        int resultado = 6;
         int resultadoOK = ejercicio1.notaMedia(notas);
         Assertions.assertEquals(resultado, resultadoOK, "No se a obtenido el valor indicado");
     }
@@ -42,28 +42,18 @@ public class Ejercicio1Test {
         Assertions.assertEquals(resultado, resultadoOK, "No se a obtenido el valor indicado");
     }
 
-    @Test
-    public void setNotasTest() {
-        ejercicio1.setNota1(5);
-        ejercicio1.setNota2(4);
-        ejercicio1.setNota3(6);
-        ejercicio1.setNota4(0);
-        ejercicio1.setNota5(9);
-        Assertions.assertTrue(true);
-    }
-
+    /***
+     *
+     * @return
+     */
     public ArrayList<Integer> listaNota() {
-        Ejercicio1 ejercicio1 = new Ejercicio1(5, 4, 6, 0, 9);
-        int nota1 = ejercicio1.getNota1();
-        int nota2 = ejercicio1.getNota2();
-        int nota3 = ejercicio1.getNota3();
-        int nota4 = ejercicio1.getNota4();
-        int nota5 = ejercicio1.getNota5();
-        notas.add(nota1);
-        notas.add(nota2);
-        notas.add(nota3);
-        notas.add(nota4);
-        notas.add(nota5);
+        ArrayList<Integer> nota = new ArrayList<Integer>();
+        notas.add(5);
+        notas.add(8);
+        notas.add(6);
+        notas.add(4);
+        notas.add(0);
+        notas.add(9);
         return notas;
     }
 }

@@ -9,99 +9,37 @@ import java.util.Scanner;
  * continuación debe mostrar todas las notas, la nota media, la nota más alta
  * que ha sacado y la menor.
  */
-public class Ejercicio1 {
-    int nota1;
-    int nota2;
-    int nota3;
-    int nota4;
-    int nota5;
-<span class="fc" id="L18">    ArrayList&lt;Integer&gt; notas = new ArrayList&lt;Integer&gt;();</span>
+<span class="fc" id="L12">public class Ejercicio1 {</span>
 
-<span class="fc" id="L20">    public Ejercicio1() {</span>
-
-<span class="fc" id="L22">    }</span>
-
-    /**
-     * Contrutor con las 5 notas
-     * 
-     * @param nota1
-     * @param nota2
-     * @param nota3
-     * @param nota4
-     * @param nota5
-     * @param notas
-     */
-<span class="fc" id="L34">    public Ejercicio1(int nota1, int nota2, int nota3, int nota4, int nota5) {</span>
-<span class="fc" id="L35">        this.nota1 = nota1;</span>
-<span class="fc" id="L36">        this.nota2 = nota2;</span>
-<span class="fc" id="L37">        this.nota3 = nota3;</span>
-<span class="fc" id="L38">        this.nota4 = nota4;</span>
-<span class="fc" id="L39">        this.nota5 = nota5;</span>
-<span class="fc" id="L40">    }</span>
-
-    public int getNota1() {
-<span class="fc" id="L43">        return this.nota1;</span>
-    }
-
-    public void setNota1(int nota1) {
-<span class="fc" id="L47">        this.nota1 = nota1;</span>
-<span class="fc" id="L48">    }</span>
-
-    public int getNota2() {
-<span class="fc" id="L51">        return this.nota2;</span>
-    }
-
-    public void setNota2(int nota2) {
-<span class="fc" id="L55">        this.nota2 = nota2;</span>
-<span class="fc" id="L56">    }</span>
-
-    public int getNota3() {
-<span class="fc" id="L59">        return this.nota3;</span>
-    }
-
-    public void setNota3(int nota3) {
-<span class="fc" id="L63">        this.nota3 = nota3;</span>
-<span class="fc" id="L64">    }</span>
-
-    public int getNota4() {
-<span class="fc" id="L67">        return this.nota4;</span>
-    }
-
-    public void setNota4(int nota4) {
-<span class="fc" id="L71">        this.nota4 = nota4;</span>
-<span class="fc" id="L72">    }</span>
-
-    public int getNota5() {
-<span class="fc" id="L75">        return this.nota5;</span>
-    }
-
-    public void setNota5(int nota5) {
-<span class="fc" id="L79">        this.nota5 = nota5;</span>
-<span class="fc" id="L80">    }</span>
-
+    
     /**
      * 
      * @param notas
      * @return
      */
     public ArrayList&lt;Integer&gt; ingresarNota(ArrayList&lt;Integer&gt; notas) {
-<span class="nc" id="L88">        Scanner lectura = new Scanner(System.in);</span>
-<span class="nc" id="L89">        System.out.println(&quot;dime la nota&quot;);</span>
-<span class="nc" id="L90">        nota1 = lectura.nextInt();</span>
-<span class="nc" id="L91">        System.out.println(&quot;dime la nota&quot;);</span>
-<span class="nc" id="L92">        nota2 = lectura.nextInt();</span>
-<span class="nc" id="L93">        System.out.println(&quot;dime la nota&quot;);</span>
-<span class="nc" id="L94">        nota3 = lectura.nextInt();</span>
-<span class="nc" id="L95">        System.out.println(&quot;dime la nota&quot;);</span>
-<span class="nc" id="L96">        nota4 = lectura.nextInt();</span>
-<span class="nc" id="L97">        System.out.println(&quot;dime la nota&quot;);</span>
-<span class="nc" id="L98">        nota5 = lectura.nextInt();</span>
-<span class="nc" id="L99">        notas.add(nota1);</span>
-<span class="nc" id="L100">        notas.add(nota2);</span>
-<span class="nc" id="L101">        notas.add(nota3);</span>
-<span class="nc" id="L102">        notas.add(nota4);</span>
-<span class="nc" id="L103">        notas.add(nota5);</span>
-<span class="nc" id="L104">        return notas;</span>
+        int nota1;
+        int nota2;
+        int nota3;
+        int nota4;
+        int nota5;
+<span class="nc" id="L26">        Scanner lectura = new Scanner(System.in);</span>
+<span class="nc" id="L27">        System.out.println(&quot;dime la nota&quot;);</span>
+<span class="nc" id="L28">        nota1 = lectura.nextInt();</span>
+<span class="nc" id="L29">        System.out.println(&quot;dime la nota&quot;);</span>
+<span class="nc" id="L30">        nota2 = lectura.nextInt();</span>
+<span class="nc" id="L31">        System.out.println(&quot;dime la nota&quot;);</span>
+<span class="nc" id="L32">        nota3 = lectura.nextInt();</span>
+<span class="nc" id="L33">        System.out.println(&quot;dime la nota&quot;);</span>
+<span class="nc" id="L34">        nota4 = lectura.nextInt();</span>
+<span class="nc" id="L35">        System.out.println(&quot;dime la nota&quot;);</span>
+<span class="nc" id="L36">        nota5 = lectura.nextInt();</span>
+<span class="nc" id="L37">        notas.add(nota1);</span>
+<span class="nc" id="L38">        notas.add(nota2);</span>
+<span class="nc" id="L39">        notas.add(nota3);</span>
+<span class="nc" id="L40">        notas.add(nota4);</span>
+<span class="nc" id="L41">        notas.add(nota5);</span>
+<span class="nc" id="L42">        return notas;</span>
     }
 
     /**
@@ -111,11 +49,11 @@ public class Ejercicio1 {
      * @return todos los numero que tiene la lista
      */
     public String mostarNotas(ArrayList&lt;Integer&gt; notas) {
-<span class="fc" id="L114">        String resultado = &quot;&quot;;</span>
-<span class="fc bfc" id="L115" title="All 2 branches covered.">        for (int i = 0; i &lt; notas.size(); i++) {</span>
-<span class="fc" id="L116">            resultado += &quot; &quot; + notas.get(i);</span>
+<span class="fc" id="L52">        String resultado = &quot;&quot;;</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        for (int i = 0; i &lt; notas.size(); i++) {</span>
+<span class="fc" id="L54">            resultado += &quot; &quot; + notas.get(i);</span>
         }
-<span class="fc" id="L118">        return resultado;</span>
+<span class="fc" id="L56">        return resultado;</span>
     }
 
     /**
@@ -124,12 +62,12 @@ public class Ejercicio1 {
      * @return
      */
     public int notaMedia(ArrayList&lt;Integer&gt; notas) {
-<span class="fc" id="L127">        int media = 0;</span>
-<span class="fc bfc" id="L128" title="All 2 branches covered.">        for (int i = 0; i &lt; notas.size(); i++) {</span>
-<span class="fc" id="L129">            media += notas.get(i);</span>
+<span class="fc" id="L65">        int media = 0;</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        for (int i = 0; i &lt; notas.size(); i++) {</span>
+<span class="fc" id="L67">            media += notas.get(i);</span>
         }
 
-<span class="fc" id="L132">        return media / 5;</span>
+<span class="fc" id="L70">        return media / 5;</span>
     }
 
     /**
@@ -138,14 +76,14 @@ public class Ejercicio1 {
      * @return
      */
     public int notaAlta(ArrayList&lt;Integer&gt; notas) {
-<span class="fc" id="L141">        int nota = notas.get(0);</span>
-<span class="fc bfc" id="L142" title="All 2 branches covered.">        for (int i = 1; i &lt; notas.size(); i++) {</span>
-<span class="fc bfc" id="L143" title="All 2 branches covered.">            if (notas.get(i) &gt; nota) {</span>
-<span class="fc" id="L144">                nota = notas.get(i);</span>
+<span class="fc" id="L79">        int nota = notas.get(0);</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        for (int i = 1; i &lt; notas.size(); i++) {</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">            if (notas.get(i) &gt; nota) {</span>
+<span class="fc" id="L82">                nota = notas.get(i);</span>
             }
         }
 
-<span class="fc" id="L148">        return nota;</span>
+<span class="fc" id="L86">        return nota;</span>
     }
 
     /**
@@ -154,14 +92,14 @@ public class Ejercicio1 {
      * @return
      */
     public int notaBaja(ArrayList&lt;Integer&gt; notas) {
-<span class="fc" id="L157">        int nota = notas.get(0);</span>
-<span class="fc bfc" id="L158" title="All 2 branches covered.">        for (int i = 1; i &lt; notas.size(); i++) {</span>
-<span class="fc bfc" id="L159" title="All 2 branches covered.">            if (notas.get(i) &lt; nota) {</span>
-<span class="fc" id="L160">                nota = notas.get(i);</span>
+<span class="fc" id="L95">        int nota = notas.get(0);</span>
+<span class="fc bfc" id="L96" title="All 2 branches covered.">        for (int i = 1; i &lt; notas.size(); i++) {</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">            if (notas.get(i) &lt; nota) {</span>
+<span class="fc" id="L98">                nota = notas.get(i);</span>
             }
         }
 
-<span class="fc" id="L164">        return nota;</span>
+<span class="fc" id="L102">        return nota;</span>
     }
 
 }
