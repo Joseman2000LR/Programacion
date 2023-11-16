@@ -68,7 +68,7 @@ public class Ejercicio2 {
      * @return
      */
     public void mostarLista(int[] elemento, int total) {
-        for (int i = 0; i < total; i++) {
+        for (int i = 0; i <= total; i++) {
             System.out.println(" " + elemento[i]);
         }
     }

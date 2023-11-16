@@ -14,13 +14,10 @@ public class Ejercicio6 {
     public static int[][] cargaConteniddo(int[][] marco) {
         for (int i = 0; i < marco.length; i++) {
             for (int k = 0; k < 15; k++) {
-                if (i == 0 || i == 4) {
+                if (i == 0 || i == marco.length - 1) {
                     marco[i][k] = 1;
-                } else if (i == 1 && k == 0 || k == 14) {
-                    marco[i][k] = 1;
-                } else if (i == 2 && k == 0 || k == 14) {
-                    marco[i][k] = 1;
-                } else if (i == 3 && k == 0 || k == 14) {
+                }
+                if (k == 0 || k == marco[i].length - 1) {
                     marco[i][k] = 1;
                 }
             }

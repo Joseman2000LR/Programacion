@@ -11,6 +11,7 @@ package ies.puerto;
 public class Ejercicio4 {
 
     /**
+     * metodo que ingresa elemento a una matri
      * 
      * @return
      */
@@ -34,11 +35,12 @@ public class Ejercicio4 {
     }
 
     /**
+     * suma los valores que tienen una mtriz
      * 
      * @param matriz
      * @return
      */
-    public String sumarElementos(int[][] matriz) {
+    public void sumarElementos(int[][] matriz) {
         int sumaColumna = 0;
         int sumaFila = 0;
         String resultado = "";
@@ -50,16 +52,8 @@ public class Ejercicio4 {
         for (int i = 0; i < matriz.length; i++) {
             sumaFila += matriz[0][i];
         }
-        return resultado = "La suma de la columna es " + sumaColumna + " y de la fila es " + sumaFila;
+        System.out.println("La suma de la columna es " + sumaColumna + " y de la fila es " + sumaFila);
 
-    }
-
-    /**
-     * 
-     * @param valor
-     */
-    public void imprimir(String valor) {
-        System.out.println(valor);
     }
 
 }

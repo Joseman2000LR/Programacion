@@ -12,21 +12,25 @@ public class Ejercicio5 {
     int[][] diagonal = new int[5][5];
 
     /**
+     * ingreasar valor el la diagonal de una matriz
      * 
      * @param diagonal
      * @return
      */
     public int[][] matrizDiaonal(int[][] diagonal) {
-        int uno = 1;
-        int cero = 0;
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 if (i == j) {
                     diagonal[i][j] = 1;
-                } else {
-                    diagonal[i][j] = 0;
                 }
             }
+        }
+        return diagonal;
+    }
+
+    public int[][] matriz(int[][] diagonal) {
+        for (int i = 0; i < diagonal.length; i++) {
+            diagonal[i][i] = 1;
         }
         return diagonal;
     }

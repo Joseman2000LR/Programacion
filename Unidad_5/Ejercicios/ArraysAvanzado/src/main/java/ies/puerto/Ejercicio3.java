@@ -8,9 +8,9 @@ import java.util.Scanner;
  * array3=array1+array2, posición a posición y el total de ambos array sumados.
  */
 public class Ejercicio3 {
-    int[] array1;
-    int[] array2;
-    int[] array3;
+    int[] array1 = new int[5];
+    int[] array2 = new int[5];
+    int[] array3 = new int[5];
 
     public Ejercicio3() {
 
@@ -55,8 +55,7 @@ public class Ejercicio3 {
 
     public void pedirElementos(int[] arrays1, int[] arrays2) {
         Scanner lectura = new Scanner(System.in);
-        arrays1 = new int[5];
-        arrays2 = new int[5];
+
         int valor;
 
         for (int i = 0; i < arrays1.length; i++) {
