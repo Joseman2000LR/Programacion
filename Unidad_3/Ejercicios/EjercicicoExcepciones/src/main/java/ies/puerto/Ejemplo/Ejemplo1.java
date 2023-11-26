@@ -1,4 +1,4 @@
-package main.java.ies.puerto;
+package ies.puerto.Ejemplo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ public class Ejemplo1 {
             FileReader lector = new FileReader(archivo);
         } catch (ArithmeticException exception) {
             System.out.println("Es una exception arimentic"
-            
+
             );
         } catch (FileNotFoundException exception) {
             System.out.println("Es una exception FilenotfoundExection");

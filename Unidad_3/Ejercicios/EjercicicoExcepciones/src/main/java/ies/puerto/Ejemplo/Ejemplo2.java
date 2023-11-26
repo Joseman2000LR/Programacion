@@ -1,4 +1,4 @@
-package main.java.ies.puerto;
+package ies.puerto.Ejemplo;
 
 public class Ejemplo2 {
     public static void main(String[] args) {
