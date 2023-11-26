@@ -10,8 +10,9 @@ import java.util.Scanner;
  */
 public class Ejercicio8 {
     public static void ingresarNumeros() {
-        int numero1;
-        int numero2;
+        int numero1 = 0;
+        int numero2 = 0;
+        int divicion;
         Scanner scanner = new Scanner(System.in);
 
         try {
@@ -28,7 +29,8 @@ public class Ejercicio8 {
         } catch (InputMismatchException e) {
             System.out.println("Error: " + e);
         }
-
+        divicion = numero1 / numero2;
+        System.out.println(divicion);
     }
 
     public static void main(String[] args) {
