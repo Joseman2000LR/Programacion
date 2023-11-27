@@ -8,7 +8,7 @@ import java.util.Scanner;
  * ArithmeticException u otra excepción adecuada.
  */
 public class Ejercicio5 {
-    public static void pedirExprecion() {
+    public static void pedirExpresion() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa una expresión matemática  ");
         String expresion = scanner.nextLine();
@@ -30,7 +30,7 @@ public class Ejercicio5 {
     }
 
     public static void main(String[] args) {
-        pedirExprecion();
+        pedirExpresion();
     }
 
 }
