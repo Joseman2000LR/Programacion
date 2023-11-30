@@ -1,4 +1,5 @@
-package main.java.ies.puerto;
+package ies.puerto;
+
 
 import java.util.Scanner;
 
