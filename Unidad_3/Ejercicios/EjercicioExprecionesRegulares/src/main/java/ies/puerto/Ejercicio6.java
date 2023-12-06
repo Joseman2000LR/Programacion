@@ -9,11 +9,20 @@ import java.util.regex.Pattern;
  */
 public class Ejercicio6 {
     public static void main(String[] args) {
-         String palabra = "";
-       
-        String regex = "(^\\d{3})";
+        String numeroTarjeta = "4111111111111111";
+        if (verificartarjeta(numeroTarjeta)) {
+            System.out.println("El número de tarjeta es válido.");
+        } else {
+            System.out.println("El número de tarjeta no es válido.");
+        }
+    }
+
+    public static boolean verificartarjeta(String numeroTarjeta) {
+        String regex = "^4[0-9]{12}([0-9]{3}$)";
 
         Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(palabra);
+        Matcher matcher = pattern.matcher(numeroTarjeta);
+        return matcher.matches();
+
     }
 }
