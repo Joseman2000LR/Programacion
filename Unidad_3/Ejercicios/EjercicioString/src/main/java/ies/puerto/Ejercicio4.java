@@ -15,7 +15,7 @@ public class Ejercicio4 {
         int i;
         for (i = cadena.length() - 1; i < cadena.length(); i--) {
             posicion = cadena.charAt(i);
-            System.out.println(posicion);
+            System.out.print(posicion);
 
         }
     }
