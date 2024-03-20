@@ -1,8 +1,9 @@
-package ies.puerto.modelo.implementacion;
+package ies.puerto.modelo.entity;
 
+import ies.puerto.modelo.fichero.abstrac.FicheroAbstract;
 import java.util.Objects;
 
-public class Alimento extends ModelPropertiesAbstract{
+public class Alimento {
     private String id;
     private String nombre;
     private String tipo;
@@ -117,6 +118,9 @@ public class Alimento extends ModelPropertiesAbstract{
         return Objects.equals(this.id, other.id);
     }
     
-    
+     public String toCsv() {
+        return id + FicheroAbstract.SEPARADOR + nombre+ FicheroAbstract.SEPARADOR +tipo +FicheroAbstract.SEPARADOR+Calorias+proteinas+grasas+FicheroAbstract.SEPARADOR+carbohidratos;
+        
+    }
 
 }

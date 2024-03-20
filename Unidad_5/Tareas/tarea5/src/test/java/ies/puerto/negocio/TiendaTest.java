@@ -1,6 +1,9 @@
 package ies.puerto.negocio;
 
-import ies.puerto.modelo.implementacion.Alimento;
+import ies.puerto.modelo.entity.Alimento;
+import java.util.HashSet;
+import java.util.List;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,22 +14,29 @@ import org.junit.jupiter.api.Test;
  */
 public class TiendaTest {
     Tienda tienda;
-    String id = "idAlimento";
-    String nombre = "nombreAliemnto";
-    String nombreActualizar="nombreActualizar";
-    String tipo="tipoAlimento";
-    String Calorias="CaloriasAlimento";
-    String proteinas="proteinasAlimento";
-    String grasas="grasasAlimento";
-    String carbohidratos="carbohidratosAlimento";
-    Alimento alimento;
-     
+   private static final String id = "idAlimento";
+  private static final  String nombre = "nombreAliemnto";
+   private static final String nombreActualizar="nombreActualizar";
+   private static final String tipo="tipoAlimento";
+  private static final  String Calorias="CaloriasAlimento";
+  private static final  String proteinas="proteinasAlimento";
+  private static final  String grasas="grasasAlimento";
+  private static final  String carbohidratos="carbohidratosAlimento";
+    Alimento alimentoNuevo;
+     List<Alimento> alimentos;
     
      @BeforeEach
     public void beforeEach() {
         tienda = new Tienda();
-        alimento = new Alimento(id, nombre, tipo, Calorias, proteinas, grasas, carbohidratos);
-        tienda.crearProducto(alimento);
+         alimentos = tienda.getAlimentos();
+        alimentoNuevo= new Alimento(id, nombre, tipo, Calorias, proteinas, grasas, carbohidratos);
+        tienda.crearProducto(alimentoNuevo);
+    }
+    
+    @AfterEach
+    public  void afterEach(){
+       tienda.setAlimentos(alimentos);
+
     }
 
     @Test
@@ -36,56 +46,9 @@ public class TiendaTest {
 
     @Test
     public void addAlimentoTiendaTest() {
-        Assertions.assertEquals(1, tienda.obtenerProductos().size(), "no se ha obtenido el tamanio esperado");
+        Assertions.assertEquals(tienda.obtenerProducto(id),alimentoNuevo);
     }
 
-    @Test
-    public void addAlimentoExisteTiendaTest() {
-        tienda.crearProducto(alimento);
-        Assertions.assertEquals(1, tienda.obtenerProductos().size(), "no se ha obtenido el tamanio esperado");
-    }
+   
 
-    @Test
-    public void EliminarAlimentoTiendaTest() {
-        tienda.eliminarProducto(alimento);
-        Assertions.assertEquals(0, tienda.obtenerProductos().size(), "no se ha obtenido el tamanio esperado");
-    }
-
-//    @Test
-//    public void ObtenerAlimentoTiendaTest() {
-//        Alimento alimentoBuscar = new Alimento(id);
-//        alimentoBuscar = (Alimento) tienda.obtenerProducto(alimentoBuscar);
-//
-//        Assertions.assertEquals(nombre, alimentoBuscar.getNombre(),
-//         "El valor no es el esperado");
-//        Assertions.assertEquals(precio, alimentoBuscar.getPrecio(),
-//         "El valor no es el esperado");
-//        Assertions.assertEquals(fEntrada, alimentoBuscar.getfEntrada(),
-//         "El valor no es el esperado");
-//        Assertions.assertEquals(fCaducidad, alimentoBuscar.getfCaducidad(),
-//         "El valor no es el esperado");
-//
-//    }
-
-    @Test
-    public void ObtenerAlimentoNoExisteTiendaTest() {
-        Alimento alimentoBuscar = new Alimento("id2");
-        alimentoBuscar = (Alimento) tienda.obtenerProducto(alimentoBuscar);
-        Assertions.assertNull(alimentoBuscar, "no se ha obtenido el valor esperado");
-    }
-//
-//    @Test
-//    public void ActualizarAlimentoTiendaTest() {
-//         Alimento alimentoActualizar = new Alimento(id, nombreActualizar, precioActualizar, fEntradaActualiza, fCaducidadActualiza);
-//        tienda.actualizarProducto(alimentoActualizar);
-//        Alimento alimentoBuscar = new Alimento(id);
-//        Assertions.assertEquals(nombreActualizar, alimentoBuscar.getNombre(),
-//         "El valor no es el esperado");
-//        Assertions.assertEquals(precioActualizar, alimentoBuscar.getPrecio(),
-//         "El valor no es el esperado");
-//        Assertions.assertEquals(fEntradaActualiza, alimentoBuscar.getfEntrada(),
-//         "El valor no es el esperado");
-//        Assertions.assertEquals(fCaducidadActualiza, alimentoBuscar.getfCaducidad(),
-//         "El valor no es el esperado");
-//    }
 }

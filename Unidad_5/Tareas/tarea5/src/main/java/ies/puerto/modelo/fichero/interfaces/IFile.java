@@ -1,12 +1,15 @@
-package ies.puerto.modelo.fichero;
+package ies.puerto.modelo.fichero.interfaces;
 
 
-import ies.puerto.modelo.implementacion.Alimento;
+import ies.puerto.modelo.entity.Alimento;
 import java.util.List;
 
-public interface IFileInterface {
-    public List<Alimento> lectura(String path, String articulo);
-
-    public boolean escritura(String path, String contenido);
+public interface IFile {
+    public List<Alimento> leer();
+    public boolean eliminar(String path);
+    public boolean existe(String path);
+    public boolean actualizar(List<Alimento> alimentos);
+    public boolean escribir(List<Alimento> alimentos);
+    public boolean modificar(List<Alimento> alimentos);
 
 }

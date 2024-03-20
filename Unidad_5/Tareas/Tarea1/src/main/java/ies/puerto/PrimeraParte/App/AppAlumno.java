@@ -1,4 +1,4 @@
-package ies.puerto.App;
+package ies.puerto.PrimeraParte.App;
 
 import ies.puerto.imple.Alumno;
 import java.util.ArrayList;

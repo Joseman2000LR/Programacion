@@ -1,94 +1,83 @@
 package ies.puerto.modelo.fichero;
 
-import ies.puerto.modelo.implementacion.Alimento;
+import ies.puerto.modelo.entity.Alimento;
+import ies.puerto.modelo.fichero.interfaces.IFile;
+import ies.puerto.modelo.fichero.abstrac.FicheroAbstract;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileCsv extends FicheroAbstract implements IFileInterface {
 
-    public FileCsv() {
-        FICHERO_ALIMENTOS = "src/main/resources/alimentos.csv";
+public class FileCsv extends FicheroAbstract{
+    
+    private static final int COLUMNA_id=0;
+    private static final int COLUMNA_nombre=2;
+    private static final int COLUMNA_tipo=3;
+    private static final int COLUMNA_Calorias=4;
+    private  static final int COLUMNA_proteinas=5;
+    private static final int COLUMNA_grasas=6;
+    private static final int COLUMNA_carbohidratos=7;
+   @Override
+    public boolean actualizar(List<Alimento> alimentos) {
+       return eliminar(RUTA_CSV) && escribir(alimentos);
+    }
+    @Override
+    public boolean escribir(List<Alimento> personas) {
+         if (existe(RUTA_CSV)) {
+            File file = new File(RUTA_CSV);
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+                bw.write(toFile(personas));
+                return true;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
     }
 
     @Override
-    public List<Alimento> lectura(String path, String articulo) {
-        List<Alimento> articulos = new ArrayList<>();
-        if (existeFichero(path)) {
-            try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+    public List<Alimento> leer() {
+       List<Alimento> alimentos = new ArrayList<>();
+        if (existe(RUTA_CSV)) {
+            File file = new File(RUTA_CSV);
+            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String linea;
-                int i = 0;
                 while ((linea = br.readLine()) != null) {
-                    if (i>0) {
-                        String[] arrayElemento = linea.split(",");
-                        switch (articulo) {
-                            case "alimento":
-                                articulos.add(splitToAlimento(arrayElemento));
-                                break;
-                        }
-                    }
-                    i++;
+                    String[] datos = linea.split(SEPARADOR);
+                    Alimento alimentoNuevo = new Alimento(datos[COLUMNA_id],datos[COLUMNA_nombre] , datos[COLUMNA_tipo],
+                            datos[COLUMNA_Calorias],datos[COLUMNA_proteinas],datos[COLUMNA_grasas], datos[COLUMNA_carbohidratos] );
+                   alimentos.add(alimentoNuevo);
                 }
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-        } else {
-            System.out.println("El fichero no existe o no es un fichero válido.");
         }
-        return articulos;
+        return alimentos;
     }
 
     @Override
-    public boolean escritura(String path, String contenido) {
-         return almacenarEnFichero(path, contenido);
+    public boolean modificar(List<Alimento> alimentos) {
+        return actualizar(alimentos);
     }
-    
-     public List<Alimento> obtenerAlimentos(){
-        return lectura(FICHERO_ALIMENTOS,"alimento");
-    }
-     private Alimento splitToAlimento(String[] splitArray){
-        Alimento alimento = new Alimento(splitArray[0],
-                splitArray[1], splitArray[2],splitArray[3],splitArray[4],splitArray[5],splitArray[6]);
-        return alimento;
-    }
-
-    public boolean eliminar(String path){
-        if (existeFichero(path)) {
-            try {
-                File file = new File(path);
-            // Crear un FileOutputStream para escribir en el archivo
-            FileOutputStream outputStream = new FileOutputStream(file);
-
-            // Escribir un contenido vacío
-            byte[] emptyContent = {};
-            outputStream.write(emptyContent);
-
-            // Cerrar el FileOutputStream
-            outputStream.close();
-
-            System.out.println("Contenido del archivo eliminado con éxito.");
-
-            } catch (IOException e) {
-                System.out.println( e.getMessage());
-            }
+    /**
+     * Formatea una lista a CSV
+     * 
+     * @param personas lista a formatear
+     * @return lista formateada
+     */
+    public String toFile(List<Alimento> alimentos) {
+        if (alimentos.isEmpty()) {
+            return null;
         }
-        return false; 
-    
+        StringBuilder contenidoBuilder = new StringBuilder();
+        for (Alimento alimento : alimentos) {
+            contenidoBuilder.append(alimento.toCsv()).append("\n");
+        }
+        return contenidoBuilder.toString();
     }
-    
-    public boolean modificar(String path){
-       return eliminar(path);
-    }
-    
-    
-
-
-   
 }
