@@ -1,0 +1,10 @@
+ies\puerto\negocio\interfaces\INegocio.class
+ies\puerto\modelo\file\FileJson.class
+ies\puerto\modelo\file\FileCsv.class
+ies\puerto\negocio\Negocio.class
+ies\puerto\modelo\entity\Personaje.class
+ies\puerto\modelo\file\interfaces\IFicheros.class
+ies\puerto\modelo\entity\PersonajeList.class
+ies\puerto\modelo\file\FileXml.class
+ies\puerto\modelo\file\abstrac\Fichero.class
+ies\puerto\modelo\file\FileJson$1.class

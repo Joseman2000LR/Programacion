@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Negocio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Marvel</a> &gt; <a href="index.source.html" class="el_package">ies.puerto.negocio</a> &gt; <span class="el_source">Negocio.java</span></div><h1>Negocio.java</h1><pre class="source lang-java linenums">package ies.puerto.negocio;
+
+import ies.puerto.modelo.entity.Personaje;
+import ies.puerto.modelo.file.FileCsv;
+import ies.puerto.modelo.file.FileJson;
+import ies.puerto.modelo.file.FileXml;
+import ies.puerto.modelo.file.interfaces.IFicheros;
+import ies.puerto.negocio.interfaces.INegocio;
+import java.util.List;
+
+/**
+ *
+ * @author josem
+ */
+public class Negocio implements INegocio{
+    
+    IFicheros ficheros;
+    List&lt;Personaje&gt; personas;
+<span class="fc" id="L19">    public Negocio() {</span>
+<span class="fc" id="L20">        ficheros = new FileXml();</span>
+<span class="fc" id="L21">        personas = ficheros.leer();</span>
+<span class="fc" id="L22">    }</span>
+
+    @Override
+    public Personaje obtenerPersonaje(String alias) {
+<span class="fc" id="L26">         Personaje personajeBuscar = new Personaje(null, alias, null, null);</span>
+<span class="pc bpc" id="L27" title="1 of 4 branches missed.">        if (personas.isEmpty() || !personas.contains(personajeBuscar)) {</span>
+<span class="fc" id="L28">            return null;</span>
+        }
+<span class="fc" id="L30">        int index = personas.indexOf(personajeBuscar);</span>
+<span class="fc" id="L31">        return personas.get(index);</span>
+    }
+
+    @Override
+    public boolean agregarPersona(Personaje personaje) {
+<span class="pc bpc" id="L36" title="1 of 4 branches missed.">         if (personas.contains(personaje) || personas.isEmpty()) {</span>
+<span class="fc" id="L37">            return true;</span>
+        }
+<span class="fc" id="L39">        personas.add(personaje);</span>
+<span class="fc" id="L40">        return ficheros.actualizar(personas);</span>
+    }
+
+    @Override
+    public boolean actualizarPersona(Personaje personaje) {
+<span class="pc bpc" id="L45" title="1 of 4 branches missed.">         if (!personas.contains(personaje) || personas.isEmpty()) {</span>
+<span class="fc" id="L46">            return false;</span>
+        }
+<span class="fc" id="L48">        personas.remove(personaje);</span>
+<span class="fc" id="L49">        personas.add(personaje);</span>
+<span class="fc" id="L50">        return ficheros.actualizar(personas);</span>
+    }
+
+    @Override
+    public boolean eliminarPersona(String alias) {
+<span class="fc" id="L55">        Personaje personaje = obtenerPersonaje(alias);</span>
+<span class="pc bpc" id="L56" title="1 of 4 branches missed.">        if (!personas.contains(personaje) || personas.isEmpty()) {</span>
+<span class="fc" id="L57">            return true;</span>
+        }
+<span class="fc" id="L59">        personas.remove(personaje);</span>
+<span class="fc" id="L60">        return ficheros.actualizar(personas);</span>
+    }
+
+    @Override
+    public String mostrarPersonajesTodosFormatos() {
+<span class="nc" id="L65">         StringBuilder stringBuilder = new StringBuilder();</span>
+<span class="nc" id="L66">        IFicheros ficherosMostrar = new FileXml();</span>
+<span class="nc" id="L67">        stringBuilder.append(&quot;XML:\n&quot;).append(ficherosMostrar.leer()).append(&quot;\n&quot;);</span>
+<span class="nc" id="L68">        ficherosMostrar = new FileJson();</span>
+<span class="nc" id="L69">        stringBuilder.append(&quot;JSON:\n&quot;).append(ficherosMostrar.leer()).append(&quot;\n&quot;);</span>
+<span class="nc" id="L70">        ficherosMostrar = new FileCsv();</span>
+<span class="nc" id="L71">        stringBuilder.append(&quot;CSV:\n&quot;).append(ficherosMostrar.leer()).append(&quot;\n&quot;);</span>
+<span class="nc" id="L72">        return stringBuilder.toString();</span>
+    }
+    
+    public List&lt;Personaje&gt; obtenerPersonajes(){
+<span class="fc" id="L76">        return ficheros.leer();</span>
+    }
+    
+     public List&lt;Personaje&gt; getPersonas() {
+<span class="fc" id="L80">        return this.personas;</span>
+    }
+
+    public void setPersonas(List&lt;Personaje&gt; personas) {
+<span class="fc" id="L84">        this.personas = personas;</span>
+<span class="fc" id="L85">        ficheros.actualizar(personas);</span>
+<span class="fc" id="L86">    }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,5 @@
+ies\puerto\modelo\file\FileXmlTest.class
+ies\puerto\modelo\entity\PersonaTest.class
+ies\puerto\negocio\NegocioTest.class
+ies\puerto\modelo\file\FileCsvTest.class
+ies\puerto\modelo\file\FileJsonTest.class

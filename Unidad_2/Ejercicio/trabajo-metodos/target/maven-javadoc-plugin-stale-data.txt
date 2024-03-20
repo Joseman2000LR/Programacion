@@ -1,0 +1,46 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'trabajo-metodos 1.0 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'trabajo-metodos 1.0 API'
+ies.puerto
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/src/main/java = 1697444020000
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/allpackages-index.html = 1697469502001
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/search.js = 1697469502017
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/allclasses.html = 1697469502009
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/jquery-ui.overrides.css = 1697469502025
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/element-list = 1697469501921
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/type-search-index.js = 1697469501985
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/stylesheet.css = 1697469502017
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/index.html = 1697469502013
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/package-search-index.js = 1697469501981
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/package-search-index.zip = 1697469501985
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/member-search-index.js = 1697469501985
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/type-search-index.zip = 1697469501985
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/member-search-index.zip = 1697469501985
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/script.js = 1697469502017
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/allclasses-index.html = 1697469501997
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/deprecated-list.html = 1697469502009
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/help-doc.html = 1697469502013
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/index-all.html = 1697469501989
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/constant-values.html = 1697469501933
+/home/dam/programacion/Programacion/Unidad_1/Tareas/trabajo-metodos/target/site/apidocs/overview-tree.html = 1697469501961

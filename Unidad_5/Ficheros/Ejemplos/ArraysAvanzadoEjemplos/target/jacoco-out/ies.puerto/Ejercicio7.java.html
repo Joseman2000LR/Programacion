@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ejercicio7.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ArraysAvanzado</a> &gt; <a href="index.source.html" class="el_package">ies.puerto</a> &gt; <span class="el_source">Ejercicio7.java</span></div><h1>Ejercicio7.java</h1><pre class="source lang-java linenums">package ies.puerto;
+
+/**
+ * Para guardar esta información se van a utilizar dos array´s:
+ * 
+ * Nombre: Array para guardar los nombres de los conductores.
+ * kms: Matriz para guardar los kilómetros que realizan cada día de la semana.
+ * Se quiere generar un nuevo vector (“total_kms”) con los kilómetros totales
+ * que realza cada conductor.
+ * Al finalizar se muestra la lista con los nombres de conductores y los
+ * kilómetros que ha realizado.
+ */
+<span class="nc" id="L13">public class Ejercicio7 {</span>
+<span class="nc" id="L14">    String[] nombreConductores = { &quot;Pepe&quot;, &quot;Juan&quot;, &quot;Carlos&quot; };</span>
+    int[][] kmsSemana;
+
+    public static void valoresKmsSemanas(int[][] kmsSemana) {
+        int kms;
+<span class="nc bnc" id="L19" title="All 2 branches missed.">        for (int i = 1; i &lt; kmsSemana.length; i++) {</span>
+<span class="nc bnc" id="L20" title="All 2 branches missed.">            for (int j = 0; j &lt; kmsSemana.length; j++) {</span>
+<span class="nc" id="L21">                kms = (int) Math.floor(Math.random() * 100 + 1);</span>
+<span class="nc" id="L22">                kmsSemana[i][j] = kms;</span>
+            }
+
+        }
+<span class="nc" id="L26">    }</span>
+
+    public static void imprimir(String[] nombreConducto, int[][] kmsSemana) {
+<span class="nc" id="L29">        String resultado = &quot;&quot;;</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">        for (int i = 0; i &lt; nombreConducto.length; i++) {</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">            for (int j = 0; j &lt; kmsSemana.length; j++) {</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">                for (int j2 = 0; j2 &lt; kmsSemana.length; j2++) {</span>
+<span class="nc" id="L33">                    resultado = nombreConducto[i] + &quot; &quot; + kmsSemana[j][j2];</span>
+                }
+
+            }
+        }
+<span class="nc bnc" id="L38" title="All 2 branches missed.">        for (int i = 0; i &lt; kmsSemana.length; i++) {</span>
+
+<span class="nc" id="L40">            System.out.println(resultado);</span>
+        }
+<span class="nc" id="L42">    }</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L45">        int[][] kmsSemana = { {}, {} };</span>
+<span class="nc" id="L46">        String[] nombreConductores = { &quot;Pepe&quot;, &quot;Juan&quot;, &quot;Carlos&quot; };</span>
+<span class="nc" id="L47">        valoresKmsSemanas(kmsSemana);</span>
+<span class="nc" id="L48">        imprimir(nombreConductores, kmsSemana);</span>
+<span class="nc" id="L49">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

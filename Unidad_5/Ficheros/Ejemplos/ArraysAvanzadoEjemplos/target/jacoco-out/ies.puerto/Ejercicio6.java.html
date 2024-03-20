@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ejercicio6.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ArraysAvanzado</a> &gt; <a href="index.source.html" class="el_package">ies.puerto</a> &gt; <span class="el_source">Ejercicio6.java</span></div><h1>Ejercicio6.java</h1><pre class="source lang-java linenums">package ies.puerto;
+
+/**
+ * Crea una tabla bidimensional de longitud 5x15 y nombre ‘marco’.
+ * Carga la tabla con dos únicos valores 0 y 1, donde el valor uno ocupará las
+ * posiciones o elementos que delimitan la tabla, es decir, las más externas,
+ * mientras que el resto de los elementos contendrán el valor 0.
+ * Crea una tabla bidimensional de longitud 5x15 y nombre ‘marco’.
+ * Visualiza el contenido de la matriz en pantalla.
+ */
+<span class="nc" id="L11">public class Ejercicio6 {</span>
+<span class="nc" id="L12">    int[][] marco = new int[5][15];</span>
+
+    public static int[][] cargaConteniddo(int[][] marco) {
+<span class="nc bnc" id="L15" title="All 2 branches missed.">        for (int i = 0; i &lt; marco.length; i++) {</span>
+<span class="nc bnc" id="L16" title="All 2 branches missed.">            for (int k = 0; k &lt; 15; k++) {</span>
+<span class="nc bnc" id="L17" title="All 4 branches missed.">                if (i == 0 || i == 4) {</span>
+<span class="nc" id="L18">                    marco[i][k] = 1;</span>
+<span class="nc bnc" id="L19" title="All 6 branches missed.">                } else if (i == 1 &amp;&amp; k == 0 || k == 14) {</span>
+<span class="nc" id="L20">                    marco[i][k] = 1;</span>
+<span class="nc bnc" id="L21" title="All 6 branches missed.">                } else if (i == 2 &amp;&amp; k == 0 || k == 14) {</span>
+<span class="nc" id="L22">                    marco[i][k] = 1;</span>
+<span class="nc bnc" id="L23" title="All 6 branches missed.">                } else if (i == 3 &amp;&amp; k == 0 || k == 14) {</span>
+<span class="nc" id="L24">                    marco[i][k] = 1;</span>
+                }
+            }
+        }
+<span class="nc" id="L28">        return marco;</span>
+    }
+
+    public static void imprimir(int[][] marco) {
+<span class="nc" id="L32">        cargaConteniddo(marco);</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        for (int i = 0; i &lt; marco.length; i++) {</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">            for (int j = 0; j &lt; 15; j++) {</span>
+<span class="nc" id="L35">                System.out.print(marco[i][j] + &quot; &quot;);</span>
+            }
+<span class="nc" id="L37">            System.out.println();</span>
+        }
+<span class="nc" id="L39">    }</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L42">        int[][] marco = new int[5][15];</span>
+<span class="nc" id="L43">        cargaConteniddo(marco);</span>
+<span class="nc" id="L44">        imprimir(marco);</span>
+<span class="nc" id="L45">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

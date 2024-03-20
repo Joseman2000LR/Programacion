@@ -1,0 +1,9 @@
+ies\puerto\negocio\abstractas\TiendaNegocio.class
+ies\puerto\modelo\entity\Aparato.class
+ies\puerto\modelo\entity\Articulo.class
+ies\puerto\presentacion\AppTienda.class
+ies\puerto\modelo\fichero\abstractas\FicheroAbstract.class
+ies\puerto\modelo\fichero\IFileInterface.class
+ies\puerto\modelo\entity\CuidadoPersonal.class
+ies\puerto\modelo\fichero\csv\implementacion\FileCsv.class
+ies\puerto\modelo\entity\Alimento.class
