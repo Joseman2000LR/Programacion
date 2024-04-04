@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: ConexionTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.208 s <<< FAILURE! - in ConexionTest
-ConexionTest.conectarBd  Time elapsed: 0.161 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: no se ha podido establecer conecionjava.sql.SQLException: path to 'src/main/resousces/usuario.db': '/home/dam/programacion/Programacion/unidad_7/bbdd/src/main/resousces' does not exist
-	at ConexionTest.conectarBd(ConexionTest.java:21)
-
