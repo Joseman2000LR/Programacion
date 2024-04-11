@@ -1,11 +1,11 @@
 # Ejercicios Recursividad
 
 ## Cuenta Regresiva
-   
+   hecho
 Escribe una función recursiva llamada cuentaRegresiva() que imprima los números del 10 al 1 en orden descendente.
 
 ## Suma de Números Naturales
-   
+   hecho
 Implementa una función recursiva llamada sumaNaturales() para calcular la suma de los primeros N números naturales.
 
 ## Impresión de Números Pares
@@ -17,7 +17,7 @@ Desarrolla una función recursiva llamada imprimirPares() que imprima todos los 
 Crea una función recursiva llamada fibonacci() para calcular el término N de la serie de Fibonacci.
 
 ## Factorial
-
+hecho
 Escribe una función recursiva llamada factorial() para calcular el factorial de un número entero dado.
 
 ## Potencia de un Número
