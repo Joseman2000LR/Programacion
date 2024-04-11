@@ -1,4 +1,4 @@
-package es.ies.puerto.exception;
+package ies.puerto.exception;
 
 public class UsuarioException extends Exception{
 

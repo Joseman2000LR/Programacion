@@ -1,12 +1,16 @@
-package es.ies.puerto.modelo.db;
+package ies.puerto.modelo.db;
 
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import ies.puerto.exception.UsuarioException;
+import ies.puerto.modelo.entity.Usuario;
 
 public class OperacionesBd extends Conexion{
 
@@ -49,8 +53,7 @@ public class OperacionesBd extends Conexion{
                 String userAlias = rs.getString("alias");
                 String userName = rs.getString("nombre");
                 String userGenero = rs.getString("genero");
-                 List<String> userPoderes = new ArrayList<>();
-                 poderes.addAll(Arrays.asList(Arrays.copyOfRange(datos, COLUMNA_PODERES, datos.length)));
+                List<String> userPoderes = new ArrayList<>(); 
                 Usuario usuario = new Usuario(userId, userName, userGenero , userPoderes);
                 lista.add(usuario);
             }

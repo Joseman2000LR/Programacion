@@ -1,10 +1,10 @@
-package es.ies.puerto.modelo.db;
-
-import es.ies.puerto.config.AppConfig;
-import es.ies.puerto.exception.UsuarioException;
+package ies.puerto.modelo.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+
+import ies.puerto.config.AppConfig;
+import ies.puerto.exception.UsuarioException;
 
 public class Conexion extends AppConfig {
     private Connection con;
@@ -15,7 +15,7 @@ public class Conexion extends AppConfig {
 
     public Conexion(String url) throws UsuarioException {
         super();
-        this.url = "jdbc:sqlite:"+url;
+        this.url = "jdbc:sqlite:" + url;
     }
 
     public Conexion(String url, String user, String password) throws UsuarioException {
@@ -28,7 +28,7 @@ public class Conexion extends AppConfig {
     public Connection getConexion() throws UsuarioException {
         try {
             this.con = DriverManager.getConnection(url);
-        }catch (Exception exception) {
+        } catch (Exception exception) {
             System.out.println(exception.getMessage());
             throw new UsuarioException("No se ha podido establecer la conexion",
                     exception);

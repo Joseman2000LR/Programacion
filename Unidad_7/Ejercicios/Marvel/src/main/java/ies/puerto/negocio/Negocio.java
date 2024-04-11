@@ -12,10 +12,11 @@ import java.util.List;
  *
  * @author josem
  */
-public class Negocio implements INegocio{
-    
+public class Negocio implements INegocio {
+
     IFicheros ficheros;
     List<Personaje> personas;
+
     public Negocio() {
         ficheros = new FileXml();
         personas = ficheros.leer();
@@ -23,7 +24,7 @@ public class Negocio implements INegocio{
 
     @Override
     public Personaje obtenerPersonaje(String alias) {
-         Personaje personajeBuscar = new Personaje(null, alias, null, null);
+        Personaje personajeBuscar = new Personaje(null, alias, null, null);
         if (personas.isEmpty() || !personas.contains(personajeBuscar)) {
             return null;
         }
@@ -33,7 +34,7 @@ public class Negocio implements INegocio{
 
     @Override
     public boolean agregarPersona(Personaje personaje) {
-         if (personas.contains(personaje) || personas.isEmpty()) {
+        if (personas.contains(personaje) || personas.isEmpty()) {
             return true;
         }
         personas.add(personaje);
@@ -42,7 +43,7 @@ public class Negocio implements INegocio{
 
     @Override
     public boolean actualizarPersona(Personaje personaje) {
-         if (!personas.contains(personaje) || personas.isEmpty()) {
+        if (!personas.contains(personaje) || personas.isEmpty()) {
             return false;
         }
         personas.remove(personaje);
@@ -62,7 +63,7 @@ public class Negocio implements INegocio{
 
     @Override
     public String mostrarPersonajesTodosFormatos() {
-         StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         IFicheros ficherosMostrar = new FileXml();
         stringBuilder.append("XML:\n").append(ficherosMostrar.leer()).append("\n");
         ficherosMostrar = new FileJson();
@@ -71,12 +72,12 @@ public class Negocio implements INegocio{
         stringBuilder.append("CSV:\n").append(ficherosMostrar.leer()).append("\n");
         return stringBuilder.toString();
     }
-    
-    public List<Personaje> obtenerPersonajes(){
+
+    public List<Personaje> obtenerPersonajes() {
         return ficheros.leer();
     }
-    
-     public List<Personaje> getPersonas() {
+
+    public List<Personaje> getPersonas() {
         return this.personas;
     }
 
@@ -84,5 +85,5 @@ public class Negocio implements INegocio{
         this.personas = personas;
         ficheros.actualizar(personas);
     }
-    
+
 }

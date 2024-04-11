@@ -1,4 +1,4 @@
-package main.java.ies.puerto.modelo.entity;
+package ies.puerto.modelo.entity;
 import java.util.Objects;
 
 public class Poderes {
