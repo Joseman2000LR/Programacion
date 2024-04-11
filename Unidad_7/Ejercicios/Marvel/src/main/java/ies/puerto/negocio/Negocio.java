@@ -1,9 +1,6 @@
 package ies.puerto.negocio;
 
 import ies.puerto.modelo.entity.Personaje;
-import ies.puerto.modelo.file.FileCsv;
-import ies.puerto.modelo.file.FileJson;
-import ies.puerto.modelo.file.FileXml;
 import ies.puerto.modelo.file.interfaces.IFicheros;
 import ies.puerto.negocio.interfaces.INegocio;
 import java.util.List;
@@ -12,19 +9,19 @@ import java.util.List;
  *
  * @author josem
  */
-public class Negocio implements INegocio {
+public class Negocio  {
 
     IFicheros ficheros;
     List<Personaje> personas;
 
     public Negocio() {
-        ficheros = new FileXml();
+       
         personas = ficheros.leer();
     }
 
-    @Override
-    public Personaje obtenerPersonaje(String alias) {
-        Personaje personajeBuscar = new Personaje(null, alias, null, null);
+    
+    public Personaje obtenerPersonaje(int id) {
+        Personaje personajeBuscar = new Personaje(id, null, null, null, null);
         if (personas.isEmpty() || !personas.contains(personajeBuscar)) {
             return null;
         }
@@ -51,26 +48,13 @@ public class Negocio implements INegocio {
         return ficheros.actualizar(personas);
     }
 
-    @Override
-    public boolean eliminarPersona(String alias) {
-        Personaje personaje = obtenerPersonaje(alias);
+    public boolean eliminarPersona(int id) {
+        Personaje personaje = obtenerPersonaje(id);
         if (!personas.contains(personaje) || personas.isEmpty()) {
             return true;
         }
         personas.remove(personaje);
         return ficheros.actualizar(personas);
-    }
-
-    @Override
-    public String mostrarPersonajesTodosFormatos() {
-        StringBuilder stringBuilder = new StringBuilder();
-        IFicheros ficherosMostrar = new FileXml();
-        stringBuilder.append("XML:\n").append(ficherosMostrar.leer()).append("\n");
-        ficherosMostrar = new FileJson();
-        stringBuilder.append("JSON:\n").append(ficherosMostrar.leer()).append("\n");
-        ficherosMostrar = new FileCsv();
-        stringBuilder.append("CSV:\n").append(ficherosMostrar.leer()).append("\n");
-        return stringBuilder.toString();
     }
 
     public List<Personaje> obtenerPersonajes() {

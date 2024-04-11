@@ -1,6 +1,5 @@
 package ies.puerto.modelo.db;
 
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -9,13 +8,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+
 import ies.puerto.exception.UsuarioException;
+import ies.puerto.modelo.entity.Poderes;
 import ies.puerto.modelo.entity.Usuario;
 
-public class OperacionesBd extends Conexion{
+public class OperacionesBd extends Conexion {
 
-    private static final int COLUMNA_PODERES = 3;
-    
     public OperacionesBd(String url) throws UsuarioException {
         super(url);
     }
@@ -49,12 +48,12 @@ public class OperacionesBd extends Conexion{
             statement = getConexion().createStatement();
             rs = statement.executeQuery(query);
             while (rs.next()) {
-                int userId = rs.getId("id");
+                Integer userId = rs.getInt("id");
                 String userAlias = rs.getString("alias");
                 String userName = rs.getString("nombre");
                 String userGenero = rs.getString("genero");
-                List<String> userPoderes = new ArrayList<>(); 
-                Usuario usuario = new Usuario(userId, userName, userGenero , userPoderes);
+                List<String> userPoderes = new ArrayList<>();
+                Usuario usuario = new Usuario();
                 lista.add(usuario);
             }
         } catch (SQLException exception) {
@@ -76,46 +75,46 @@ public class OperacionesBd extends Conexion{
         }
         return lista;
     }
+
     public Set<Usuario> obtenerUsuarios() throws UsuarioException {
-        String query = "select u.id, u.nombre, u.alias, u.genero from usuarios as u";
+        String query = "select u.id, u.nombre, u.alias, u.genero ,u.poderes from usuarios as u";
         return obtener(query);
     }
 
-    public Set<Poderes> obtenerPoderes() throws UsuarioException {
+    public Set<Usuario> obtenerPoderes() throws UsuarioException {
         String query = "select u.id, u.personajes_id, u.poder from Poderes as u";
         return obtener(query);
     }
 
     public Usuario obtenerUsuario(Usuario usuario) throws UsuarioException {
         String query = "select u.id, u.nombre, u.alias, u.genero from usuarios as u" +
-                " where u.id='"+usuario.getId()+"'";
+                " where u.id='" + usuario.getId() + "'";
         Set<Usuario> lista = obtener(query);
-        if(lista.isEmpty()) {
+        if (lista.isEmpty()) {
             return null;
         }
         return lista.iterator().next();
     }
 
     public void insertarUsuario(Usuario usuario) throws UsuarioException {
-        String query = "INSERT INTO usuarios as u (id,nombre, alias, genero)" +
-                " VALUES ('"+usuario.getId()+"',"
-                + usuario.getNombre()+"," +
-                ""+usuario.getAlias()+","+usuario.getGenero +"')";
+        String query = "INSERT INTO usuarios as u (id,nombre, genero, poderes)" +
+                " VALUES ('" + usuario.getId() + "',"
+                + usuario.getNombre() + "," + usuario.getAlias() + "," +usuario.getGenero() 
+                +","+ usuario.getPoderes() + "')";
         actualizar(query);
     }
 
-    public void actualizarUsuario(Usuario usuario) throws UsuarioException{
-        String query = "update usuarios set nombre='"+usuario.getNombre()+"', " +
-                "ciudad='"+usuario.getCiudad()+"', edad="+usuario.getEdad()+" " +
-                "where id='"+usuario.getId()+"'";
+    public void actualizarUsuario(Usuario usuario) throws UsuarioException {
+        String query = "update usuarios set nombre='" + usuario.getNombre() + "', " +
+                "ciudad='" + usuario.getPoderes() + "', edad=" + usuario.getGenero() + " " +
+                "where id='" + usuario.getId() + "'";
         actualizar(query);
     }
 
-    public void eliminarUsuario(Usuario usuario) throws UsuarioException{
+    public void eliminarUsuario(Usuario usuario) throws UsuarioException {
         String query = "delete FROM usuarios as u" +
-                " where u.id='"+usuario.getId()+"'";
+                " where u.id='" + usuario.getId() + "'";
         actualizar(query);
     }
-
 
 }

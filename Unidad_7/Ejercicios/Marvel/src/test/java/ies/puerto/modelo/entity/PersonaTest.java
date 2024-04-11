@@ -4,7 +4,6 @@
  */
 package ies.puerto.modelo.entity;
 
-import ies.puerto.modelo.file.abstrac.Fichero;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
