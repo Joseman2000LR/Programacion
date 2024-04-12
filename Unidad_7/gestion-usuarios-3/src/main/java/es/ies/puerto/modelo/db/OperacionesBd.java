@@ -2,7 +2,6 @@ package es.ies.puerto.modelo.db;
 
 import es.ies.puerto.exception.UsuarioException;
 import es.ies.puerto.modelo.Usuario;
-import ies.puerto.modelo.entity.Personaje;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

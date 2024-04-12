@@ -13,7 +13,6 @@ public class Personaje {
     private String nombre;
     private String alias;
     private String genero;
-    List<Poderes> Poderes;
 
     public Personaje() {
 
@@ -24,12 +23,12 @@ public class Personaje {
 
     }
 
-    public Personaje(int id, String nombre, String alias, String genero, List<Poderes> Poderes) {
+    public Personaje(int id, String nombre, String alias, String genero) {
         this.id = id;
         this.nombre = nombre;
         this.alias = alias;
         this.genero = genero;
-        this.Poderes = Poderes;
+
     }
 
     public int getId() {
@@ -58,14 +57,6 @@ public class Personaje {
 
     public String getGenero() {
         return this.genero;
-    }
-
-    public List<Poderes> getPoderes() {
-        return this.Poderes;
-    }
-
-    public void setPoderes(List<Poderes> Poderes) {
-        this.Poderes = Poderes;
     }
 
     public void setGenero(String genero) {

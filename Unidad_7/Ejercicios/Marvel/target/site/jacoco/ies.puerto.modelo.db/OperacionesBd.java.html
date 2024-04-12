@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OperacionesBd.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Marvel</a> &gt; <a href="index.source.html" class="el_package">ies.puerto.modelo.db</a> &gt; <span class="el_source">OperacionesBd.java</span></div><h1>OperacionesBd.java</h1><pre class="source lang-java linenums">package ies.puerto.modelo.db;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+
+import ies.puerto.exception.UsuarioException;
+import ies.puerto.modelo.entity.Poderes;
+import ies.puerto.modelo.entity.Usuario;
+
+public class OperacionesBd extends Conexion {
+
+    public OperacionesBd(String url) throws UsuarioException {
+<span class="nc" id="L19">        super(url);</span>
+<span class="nc" id="L20">    }</span>
+
+    private void actualizar(String query) throws UsuarioException {
+<span class="nc" id="L23">        Statement statement = null;</span>
+        try {
+<span class="nc" id="L25">            statement = getConexion().createStatement();</span>
+<span class="nc" id="L26">            statement.executeUpdate(query);</span>
+<span class="nc" id="L27">        } catch (SQLException exception) {</span>
+<span class="nc" id="L28">            throw new UsuarioException(exception.getMessage(), exception);</span>
+        } finally {
+            try {
+<span class="nc bnc" id="L31" title="All 4 branches missed.">                if (statement != null &amp;&amp; !statement.isClosed()) {</span>
+<span class="nc" id="L32">                    statement.close();</span>
+                }
+<span class="nc bnc" id="L34" title="All 2 branches missed.">                if (!getConexion().isClosed()) {</span>
+<span class="nc" id="L35">                    getConexion().close();</span>
+                }
+<span class="nc" id="L37">            } catch (SQLException e) {</span>
+<span class="nc" id="L38">                throw new UsuarioException(e.getMessage(), e);</span>
+<span class="nc" id="L39">            }</span>
+        }
+<span class="nc" id="L41">    }</span>
+
+    private Set&lt;Usuario&gt; obtener(String query) throws UsuarioException {
+<span class="nc" id="L44">        Set&lt;Usuario&gt; lista = new HashSet&lt;&gt;();</span>
+<span class="nc" id="L45">        Statement statement = null;</span>
+<span class="nc" id="L46">        ResultSet rs = null;</span>
+        try {
+<span class="nc" id="L48">            statement = getConexion().createStatement();</span>
+<span class="nc" id="L49">            rs = statement.executeQuery(query);</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">            while (rs.next()) {</span>
+<span class="nc" id="L51">                Integer userId = rs.getInt(&quot;id&quot;);</span>
+<span class="nc" id="L52">                String userAlias = rs.getString(&quot;alias&quot;);</span>
+<span class="nc" id="L53">                String userName = rs.getString(&quot;nombre&quot;);</span>
+<span class="nc" id="L54">                String userGenero = rs.getString(&quot;genero&quot;);</span>
+<span class="nc" id="L55">                List&lt;String&gt; userPoderes = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L56">                Usuario usuario = new Usuario();</span>
+<span class="nc" id="L57">                lista.add(usuario);</span>
+<span class="nc" id="L58">            }</span>
+<span class="nc" id="L59">        } catch (SQLException exception) {</span>
+<span class="nc" id="L60">            throw new UsuarioException(exception.getMessage(), exception);</span>
+        } finally {
+            try {
+<span class="nc bnc" id="L63" title="All 4 branches missed.">                if (rs != null &amp;&amp; !rs.isClosed()) {</span>
+<span class="nc" id="L64">                    rs.close();</span>
+                }
+<span class="nc bnc" id="L66" title="All 4 branches missed.">                if (statement != null &amp;&amp; !statement.isClosed()) {</span>
+<span class="nc" id="L67">                    statement.close();</span>
+                }
+<span class="nc bnc" id="L69" title="All 2 branches missed.">                if (!getConexion().isClosed()) {</span>
+<span class="nc" id="L70">                    getConexion().close();</span>
+                }
+<span class="nc" id="L72">            } catch (SQLException e) {</span>
+<span class="nc" id="L73">                throw new UsuarioException(e.getMessage(), e);</span>
+<span class="nc" id="L74">            }</span>
+        }
+<span class="nc" id="L76">        return lista;</span>
+    }
+
+    public Set&lt;Usuario&gt; obtenerUsuarios() throws UsuarioException {
+<span class="nc" id="L80">        String query = &quot;select u.id, u.nombre, u.alias, u.genero ,u.poderes from usuarios as u&quot;;</span>
+<span class="nc" id="L81">        return obtener(query);</span>
+    }
+
+    public Set&lt;Usuario&gt; obtenerPoderes() throws UsuarioException {
+<span class="nc" id="L85">        String query = &quot;select u.id, u.personajes_id, u.poder from Poderes as u&quot;;</span>
+<span class="nc" id="L86">        return obtener(query);</span>
+    }
+
+    public Usuario obtenerUsuario(Usuario usuario) throws UsuarioException {
+<span class="nc" id="L90">        String query = &quot;select u.id, u.nombre, u.alias, u.genero from usuarios as u&quot; +</span>
+<span class="nc" id="L91">                &quot; where u.id='&quot; + usuario.getId() + &quot;'&quot;;</span>
+<span class="nc" id="L92">        Set&lt;Usuario&gt; lista = obtener(query);</span>
+<span class="nc bnc" id="L93" title="All 2 branches missed.">        if (lista.isEmpty()) {</span>
+<span class="nc" id="L94">            return null;</span>
+        }
+<span class="nc" id="L96">        return lista.iterator().next();</span>
+    }
+
+    public void insertarUsuario(Usuario usuario) throws UsuarioException {
+<span class="nc" id="L100">        String query = &quot;INSERT INTO usuarios as u (id,nombre, genero, poderes)&quot; +</span>
+<span class="nc" id="L101">                &quot; VALUES ('&quot; + usuario.getId() + &quot;',&quot;</span>
+<span class="nc" id="L102">                + usuario.getNombre() + &quot;,&quot; + usuario.getAlias() + &quot;,&quot; +usuario.getGenero() </span>
+<span class="nc" id="L103">                +&quot;,&quot;+ usuario.getPoderes() + &quot;')&quot;;</span>
+<span class="nc" id="L104">        actualizar(query);</span>
+<span class="nc" id="L105">    }</span>
+
+    public void actualizarUsuario(Usuario usuario) throws UsuarioException {
+<span class="nc" id="L108">        String query = &quot;update usuarios set nombre='&quot; + usuario.getNombre() + &quot;', &quot; +</span>
+<span class="nc" id="L109">                &quot;ciudad='&quot; + usuario.getPoderes() + &quot;', edad=&quot; + usuario.getGenero() + &quot; &quot; +</span>
+<span class="nc" id="L110">                &quot;where id='&quot; + usuario.getId() + &quot;'&quot;;</span>
+<span class="nc" id="L111">        actualizar(query);</span>
+<span class="nc" id="L112">    }</span>
+
+    public void eliminarUsuario(Usuario usuario) throws UsuarioException {
+<span class="nc" id="L115">        String query = &quot;delete FROM usuarios as u&quot; +</span>
+<span class="nc" id="L116">                &quot; where u.id='&quot; + usuario.getId() + &quot;'&quot;;</span>
+<span class="nc" id="L117">        actualizar(query);</span>
+<span class="nc" id="L118">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
