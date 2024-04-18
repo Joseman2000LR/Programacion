@@ -9,7 +9,7 @@ Escribe una función recursiva llamada cuentaRegresiva() que imprima los número
 Implementa una función recursiva llamada sumaNaturales() para calcular la suma de los primeros N números naturales.
 
 ## Impresión de Números Pares
-   
+   hecho
 Desarrolla una función recursiva llamada imprimirPares() que imprima todos los números pares del 1 al N.
 
 ## Serie de Fibonacci
@@ -21,7 +21,7 @@ hecho
 Escribe una función recursiva llamada factorial() para calcular el factorial de un número entero dado.
 
 ## Potencia de un Número
-
+hecho
 Implementa una función recursiva llamada potencia() para calcular la potencia de un número base elevado a un exponente dado.
 
 ## Conteo Regresivo
