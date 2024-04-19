@@ -13,7 +13,7 @@ Implementa una función recursiva llamada sumaNaturales() para calcular la suma 
 Desarrolla una función recursiva llamada imprimirPares() que imprima todos los números pares del 1 al N.
 
 ## Serie de Fibonacci
-
+hecho
 Crea una función recursiva llamada fibonacci() para calcular el término N de la serie de Fibonacci.
 
 ## Factorial
