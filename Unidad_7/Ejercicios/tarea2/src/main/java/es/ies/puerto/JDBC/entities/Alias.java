@@ -1,5 +1,7 @@
 package es.ies.puerto.JDBC.entities;
 
+import java.util.Objects;
+
 public class Alias {
     private int id ;
     private int personaje_id ;
@@ -8,7 +10,7 @@ public class Alias {
 
     public Alias(int id) {
         this.id = id;
-       
+
     }
 
     public Alias(int id, int personaje_id, String alias) {
@@ -42,7 +44,18 @@ public class Alias {
         this.alias = alias;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Alias alias = (Alias) o;
+        return id == alias.id;
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
     @Override
     public String toString() {

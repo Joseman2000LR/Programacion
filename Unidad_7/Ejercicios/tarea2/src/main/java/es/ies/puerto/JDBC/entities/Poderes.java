@@ -1,5 +1,7 @@
 package es.ies.puerto.JDBC.entities;
 
+import java.util.Objects;
+
 public class Poderes {
     private int id;
     private String poder;
@@ -7,7 +9,7 @@ public class Poderes {
 
     public Poderes(int id) {
         this.id = id;
-       
+
     }
     public Poderes(int id, String poder) {
         this.id = id;
@@ -32,6 +34,18 @@ public class Poderes {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Poderes poderes = (Poderes) o;
+        return id == poderes.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
     @Override
     public String toString() {

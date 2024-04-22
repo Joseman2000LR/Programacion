@@ -3,16 +3,12 @@ package es.ies.puerto.JDBC.modelo.db;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import es.ies.puerto.JDBC.entities.Alias;
 import es.ies.puerto.JDBC.entities.Personaje;
 import es.ies.puerto.JDBC.entities.Poderes;
-import es.ies.puerto.JDBC.entities.Usuario;
 import es.ies.puerto.JDBC.exception.UsuarioException;
 
 public class OperacionesBd extends Conexion {
@@ -221,7 +217,7 @@ public class OperacionesBd extends Conexion {
     public Poderes obtenerPoder(Poderes poderes) throws UsuarioException {
         String query = "select u.id, u.poder from Poderes  as u" +
                 " where u.id='" + poderes.getId() + "'";
-        Set<Poderes> lista = obtenerAli(query);
+        Set<Poderes> lista = obtenerpode(query);
         if (lista.isEmpty()) {
             return null;
         }
@@ -236,12 +232,12 @@ public class OperacionesBd extends Conexion {
     }
 
     public void actualizarPoderes(Poderes poderes) throws UsuarioException {
-        String query = "update Poderes set poder ='" + poderes.getpoder() + "'" +
+        String query = "update Poderes set poder ='" + poderes.getPoder() + "'" +
                 "where id='" + poderes.getId() + "'";
         actualizar(query);
     }
 
-    public void eliminarPoderes(Poders poderes) throws UsuarioException {
+    public void eliminarPoderes(Poderes poderes) throws UsuarioException {
         String query = "delete FROM poderes as u" +
                 " where u.id='" + poderes.getId() + "'";
         actualizar(query);

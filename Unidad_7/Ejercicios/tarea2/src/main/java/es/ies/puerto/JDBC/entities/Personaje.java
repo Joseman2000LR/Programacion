@@ -1,5 +1,7 @@
 package es.ies.puerto.JDBC.entities;
 
+import java.util.Objects;
+
 public class Personaje {
     private int id;
     private String nombre;
@@ -8,7 +10,7 @@ public class Personaje {
 
     public Personaje(int id) {
         this.id = id;
-       
+
     }
 
 
@@ -43,6 +45,19 @@ public class Personaje {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Personaje personaje = (Personaje) o;
+        return id == personaje.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     @Override
