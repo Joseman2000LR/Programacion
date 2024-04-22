@@ -64,6 +64,13 @@ public class Personaje implements Serializable {
         return Objects.equals(id, personaje.id);
     }
 
+    @OneToOne
+    private Alias alias;
+    // mucho a uno
+    @OneToMany
+    private Poderes poderes;
+
+
     @Override
     public int hashCode() {
         return Objects.hash(id);
