@@ -1,8 +1,0 @@
-ies\puerto\negocio\interfaces\INegocio.class
-ies\puerto\modelo\entity\Personaje.class
-ies\puerto\modelo\db\OperacionesBd.class
-ies\puerto\modelo\entity\Poderes.class
-ies\puerto\modelo\db\Conexion.class
-ies\puerto\modelo\entity\Usuario.class
-ies\puerto\config\AppConfig.class
-ies\puerto\exception\UsuarioException.class
