@@ -1,4 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: es.ies.puerto.modelo.db.JdbcTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.362 s - in es.ies.puerto.modelo.db.JdbcTest
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 10.301 s <<< FAILURE! - in es.ies.puerto.modelo.db.JdbcTest
+es.ies.puerto.modelo.db.JdbcTest.obtenerPersonajes  Time elapsed: 0.268 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+	at es.ies.puerto.modelo.db.JdbcTest.obtenerPersonajes(JdbcTest.java:52)
+
+es.ies.puerto.modelo.db.JdbcTest.insertarPoderesTest  Time elapsed: 3.353 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Se produjo una excepción durante la prueba: [SQLITE_BUSY]  The database file is locked (database is locked)
+	at es.ies.puerto.modelo.db.JdbcTest.insertarPoderesTest(JdbcTest.java:119)
+
+es.ies.puerto.modelo.db.JdbcTest.actualizarPersonajeTest  Time elapsed: 3.335 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Se ha producido un error en la eliminacion:[SQLITE_BUSY]  The database file is locked (database is locked)
+	at es.ies.puerto.modelo.db.JdbcTest.afterEach(JdbcTest.java:130)
+
+es.ies.puerto.modelo.db.JdbcTest.insertarAliasTest  Time elapsed: 3.334 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Se produjo una excepción durante la prueba: [SQLITE_BUSY]  The database file is locked (database is locked)
+	at es.ies.puerto.modelo.db.JdbcTest.insertarAliasTest(JdbcTest.java:102)
+

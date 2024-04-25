@@ -1,9 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-tareaMarvel,es.ies.puerto.config,AppConfig,7,24,0,0,4,7,1,2,1,2
-tareaMarvel,es.ies.puerto.modelo.db,Conexion,23,17,0,0,8,6,1,2,1,2
-tareaMarvel,es.ies.puerto.modelo.db,SQLiteDialect,195,0,2,0,52,0,25,0,24,0
-tareaMarvel,es.ies.puerto.modelo.db,Crud,238,147,17,7,80,42,19,8,9,6
-tareaMarvel,es.ies.puerto.modelo.impl,Alias,24,48,2,2,8,19,5,8,3,8
-tareaMarvel,es.ies.puerto.modelo.impl,Personaje,58,51,3,3,25,15,15,4,12,4
-tareaMarvel,es.ies.puerto.modelo.impl,Poder,23,9,0,0,11,4,6,1,6,1
-tareaMarvel,es.ies.puerto.excepcion,UsuarioException,5,0,0,0,2,0,1,0,1,0

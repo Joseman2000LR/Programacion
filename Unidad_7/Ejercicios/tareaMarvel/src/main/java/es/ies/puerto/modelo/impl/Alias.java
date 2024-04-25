@@ -6,9 +6,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Alias")
-public class Alias implements Serializable{
+public class Alias implements Serializable {
 
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -19,6 +18,10 @@ public class Alias implements Serializable{
     @Column(name = "alias")
     String alias;
 
+    public Alias(Integer id, String alias) {
+        this.id = id;
+        this.alias = alias;
+    }
 
     public Alias(Integer id, Personaje personaje, String alias) {
         this.id = id;
@@ -53,7 +56,6 @@ public class Alias implements Serializable{
         this.alias = alias;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -70,16 +72,13 @@ public class Alias implements Serializable{
         return Objects.hash(id);
     }
 
-
     @Override
     public String toString() {
         return "{" +
-            " id='" + getId() + "'" +
-            ", personaje='" + getPersonaje() + "'" +
-            ", alias='" + getAlias() + "'" +
-            "}";
+                " id='" + getId() + "'" +
+                ", personaje='" + getPersonaje() + "'" +
+                ", alias='" + getAlias() + "'" +
+                "}";
     }
-
-    
 
 }

@@ -1,0 +1,4 @@
+# Created at 2024-04-25T20:00:32.572
+Boot Manifest-JAR contains absolute paths in classpath 'D:\RepositoriosGitHub\Programacion\Unidad_7\Ejercicios\tareaMarvel\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

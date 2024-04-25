@@ -5,29 +5,24 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-
-
-
 @Entity
 @Table(name = "Poderes")
-public class Poder implements Serializable{
+public class Poder implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     Integer id;
     String poder;
-    @ManyToMany(mappedBy = "poderes",cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "poderes", cascade = CascadeType.ALL)
     Set<Personaje> personaje;
-
 
     public Poder() {
     }
 
-    public Poder(Integer id, String poder ) {
+    public Poder(Integer id, String poder) {
         this.id = id;
         this.poder = poder;
     }
-
 
     public Integer getId() {
         return this.id;
@@ -37,7 +32,19 @@ public class Poder implements Serializable{
         this.id = id;
     }
 
+    public Poder(Integer id, String poder, Set<Personaje> personaje) {
+        this.id = id;
+        this.poder = poder;
+        this.personaje = personaje;
+    }
 
+    public Set<Personaje> getPersonaje() {
+        return this.personaje;
+    }
+
+    public void setPersonaje(Set<Personaje> personaje) {
+        this.personaje = personaje;
+    }
 
     public String getPoder() {
         return this.poder;
@@ -47,16 +54,12 @@ public class Poder implements Serializable{
         this.poder = poder;
     }
 
-
     @Override
     public String toString() {
         return "{" +
-            " id='" + getId() + "'" +
-            ", poder='" + getPoder() +
-            "}";
+                " id='" + getId() + "'" +
+                ", poder='" + getPoder() +
+                "}";
     }
-
-
-
 
 }

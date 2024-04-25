@@ -6,9 +6,7 @@ import java.sql.DriverManager;
 import es.ies.puerto.config.AppConfig;
 import es.ies.puerto.excepcion.UsuarioException;
 
-    
-
-public class Conexion extends AppConfig{
+public class Conexion extends AppConfig {
     private Connection con;
 
     private String url;
@@ -17,7 +15,11 @@ public class Conexion extends AppConfig{
 
     public Conexion(String url) throws UsuarioException {
         super();
-        this.url = "jdbc:sqlite:"+getUrl();
+        this.url = "jdbc:sqlite:" + getUrl();
+    }
+
+    public Conexion() throws UsuarioException {
+        super();
     }
 
     public Conexion(String url, String user, String password) throws UsuarioException {
@@ -30,7 +32,7 @@ public class Conexion extends AppConfig{
     public Connection getConexion() throws UsuarioException {
         try {
             this.con = DriverManager.getConnection(url);
-        }catch (Exception exception) {
+        } catch (Exception exception) {
             System.out.println(exception.getMessage());
             throw new UsuarioException("No se ha podido establecer la conexion",
                     exception);
