@@ -23,19 +23,11 @@ public class Poder implements Serializable{
     public Poder() {
     }
 
-    public Poder(Integer id, String poder, Set<Personaje> personaje) {
+    public Poder(Integer id, String poder ) {
         this.id = id;
         this.poder = poder;
-        this.personaje = personaje;
     }
 
-    public Set<Personaje> getPersonaje() {
-        return this.personaje;
-    }
-
-    public void setPersonaje(Set<Personaje> personaje) {
-        this.personaje = personaje;
-    }
 
     public Integer getId() {
         return this.id;
@@ -55,6 +47,14 @@ public class Poder implements Serializable{
         this.poder = poder;
     }
 
+
+    @Override
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", poder='" + getPoder() +
+            "}";
+    }
 
 
 

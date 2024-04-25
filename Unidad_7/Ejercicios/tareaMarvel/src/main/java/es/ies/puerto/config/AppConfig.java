@@ -7,8 +7,6 @@ import java.util.Properties;
 public class AppConfig {
     String url;
 
-
-
     public String getUrl() {
         Properties properties = new Properties();
         try (FileInputStream fis = new FileInputStream("src/main/resources/app.properties")) {

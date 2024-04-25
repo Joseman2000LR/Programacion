@@ -16,12 +16,12 @@ public class Personaje implements Serializable{
     Integer id;
     @Column(name = "nombre")
     private String nombre;
-
+    @Column(name = "genero")
+    private String genero;
     @OneToOne(mappedBy = "personaje",orphanRemoval = true,cascade = CascadeType.ALL)
     private Alias alias;
     
-    @Column(name = "genero")
-    private String genero;
+   
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "Personajes_Poderes",joinColumns = 
@@ -33,7 +33,11 @@ public class Personaje implements Serializable{
     public Personaje() {
     }
 
-
+    public Personaje(Integer id, String nombre, String genero) {
+        this.id = id;
+        this.nombre = nombre;
+        this.genero = genero;
+    }
     public Personaje(Integer id, String nombre, Alias alias, String genero) {
         this.id = id;
         this.nombre = nombre;

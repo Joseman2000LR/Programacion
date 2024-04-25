@@ -1,4 +1,5 @@
 package es.ies.puerto.modelo.db;
+
 import java.sql.Types;
 
 import org.hibernate.dialect.Dialect;

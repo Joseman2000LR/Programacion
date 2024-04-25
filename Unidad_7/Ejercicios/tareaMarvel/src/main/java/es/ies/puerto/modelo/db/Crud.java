@@ -1,6 +1,7 @@
 package es.ies.puerto.modelo.db;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashSet;
 import java.util.Set;
@@ -8,24 +9,46 @@ import java.util.Set;
 import es.ies.puerto.excepcion.UsuarioException;
 import es.ies.puerto.modelo.impl.Alias;
 import es.ies.puerto.modelo.impl.Personaje;
-//import es.ies.puerto.modelo.impl.Poder;
 import es.ies.puerto.modelo.impl.Poder;
-import es.ies.puerto.modelo.interfaces.ICrud;
 
-public class Crud extends Conexion implements ICrud{
+public class Crud extends Conexion {
+    
+    public Crud(String url) throws UsuarioException {
+        super(url);
+    }
+    private void actualizar(String query) throws UsuarioException {
+        Statement statement = null;
+        try {
+            statement = getConexion().createStatement();
+            statement.executeUpdate(query);
+        } catch (SQLException exception) {
+            throw new UsuarioException(exception.getMessage(), exception);
+        } finally {
+            try {
+                if (statement != null && !statement.isClosed()) {
+                    statement.close();
+                }
+                if (!getConexion().isClosed()) {
+                    getConexion().close();
+                }
+            } catch (SQLException e) {
+                throw new UsuarioException(e.getMessage(), e);
+            }
+        }
+    }
     public ResultSet obtener(String sql)throws UsuarioException{
         ResultSet resultSet = null;
         Statement statement = null;
         try {
-            statement = getConnection().createStatement();
+            statement = getConexion().createStatement();
             resultSet = statement.executeQuery(sql);
         } catch (Exception e) {
             try {
-                if (getConnection()!=null && !getConnection().isClosed()) {
-                    getConnection().close();
-                }
                 if (statement!=null && !statement.isClosed()) {
                     statement.close();
+                }
+                if (getConexion()!=null && !getConexion().isClosed()) {
+                    getConexion().close();
                 }
             } catch (Exception p) {
                 throw new UsuarioException(p.getMessage(), p);
@@ -37,8 +60,8 @@ public class Crud extends Conexion implements ICrud{
     }
     public void cerrar()throws UsuarioException{
         try {
-            if (getConnection()!=null && !getConnection().isClosed()) {
-                getConnection().close();
+            if (getConexion()!=null && !getConexion().isClosed()) {
+                getConexion().close();
             }
         } catch (Exception p) {
             throw new UsuarioException(p.getMessage(), p);
@@ -85,7 +108,7 @@ public class Crud extends Conexion implements ICrud{
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String poder = resultSet.getString("poder");
-                poderes.add(new Poder(id, poder, null));
+                poderes.add(new Poder(id, poder));
             }
         } catch (Exception e) {
             throw new UsuarioException(e.getMessage(), e);
@@ -93,7 +116,7 @@ public class Crud extends Conexion implements ICrud{
         cerrar();
         return poderes;
     }
-    @Override
+
     public Personaje obtenerPersonaje(Personaje personaje) throws UsuarioException {
         ResultSet resultSet = obtener("SELECT id,genero,nombre FROM Personajes WHERE id="+personaje.getId());
         try {
@@ -109,20 +132,53 @@ public class Crud extends Conexion implements ICrud{
         cerrar();
         return personaje;
     }
-    @Override
-    public void agregarPersonaje(Personaje personaje) throws UsuarioException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'agregarPersonaje'");
+
+    
+    public void insertarPersonaje(Personaje personaje) throws UsuarioException {
+        String query = "INSERT INTO Personajes as p (id, nombre, genero)" +
+                " VALUES ('"+personaje.getId()+"',"
+                + personaje.getNombre()+"," +
+                " '"+personaje.getGenero()+"')";
+        actualizar(query);
     }
-    @Override
-    public void actualizarPersonaje(Personaje personaje) throws UsuarioException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actualizarPersonaje'");
+
+    public void insertarAlias(Alias alias) throws UsuarioException {
+        String query = "INSERT INTO Personajes as p (id, personaje_id, alias)" +
+                " VALUES ('"+alias.getId()+"',"
+                + alias.getPersonaje()+"," +
+                " '"+alias.getAlias()+"')";
+        actualizar(query);
     }
-    @Override
-    public void eliminarPersonaje(Personaje personaje) throws UsuarioException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eliminarPersonaje'");
+    public void insertarPoderes(Poder poder) throws UsuarioException {
+        String query = "INSERT INTO Personajes as p (id, poder)" +
+                " VALUES ('"+poder.getId()+"',"
+                + poder.getPoder()+"')";
+        actualizar(query);
     }
+
+    public void actualizarPersonajes(Personaje personaje) throws UsuarioException{
+        String query = "update Personajes as p set p.nombre='"+personaje.getNombre()+"', " +
+                "', p.genero="+personaje.getGenero()+" " +
+                "where p.id='"+personaje.getId()+"'";
+        actualizar(query);
+    }
+    public void actualizarAlias(Alias alias) throws UsuarioException{
+        String query = "update Alias set personaje_id='"+alias.getPersonaje()+"', " +
+                "', alias="+alias.getAlias()+" " +
+                "where id='"+alias.getId()+"'";
+        actualizar(query);
+    }
+    public void actualizarPoder(Poder poder) throws UsuarioException{
+        String query = "update Poder set poder='"+poder.getPoder()+"' "+
+                "where id='"+poder.getId()+"'";
+        actualizar(query);
+    }
+
+    public void eliminarPersonajes(Personaje personaje) throws UsuarioException{
+        String query = "delete FROM personajes as p" +
+                " where p.id='"+personaje.getId()+"'";
+        actualizar(query);
+    }
+   
 }
 
