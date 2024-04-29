@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="15055ff1-206d-4956-a37c-9fce9c61a98a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/db/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/db/Conexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/db/Crud.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/db/Crud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/db/CrudHibernate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/db/SQLiteDialect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/db/SQLiteDialect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/impl/Personaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/impl/Personaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/impl/Poder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/impl/Poder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/main/java/es/ies/puerto/modelo/interfaces/ICrud.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/test/java/es/ies/puerto/modelo/db/HibernateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/src/test/java/es/ies/puerto/modelo/db/JdbcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/src/test/java/es/ies/puerto/modelo/db/JdbcTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/db/Conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/db/Conexion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/db/Crud.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/db/Crud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/db/CrudHibernate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/db/SQLiteDialect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/db/SQLiteDialect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/impl/Alias.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/impl/Alias.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/impl/Personaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/impl/Personaje.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/impl/Poder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/impl/Poder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/classes/es/ies/puerto/modelo/interfaces/ICrud.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/surefire-reports/2024-04-24T11-40-01_903.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/surefire-reports/2024-04-24T11-40-23_278.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/surefire-reports/TEST-es.ies.puerto.modelo.db.HibernateTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/surefire-reports/TEST-es.ies.puerto.modelo.db.JdbcTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/surefire-reports/TEST-es.ies.puerto.modelo.db.JdbcTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/surefire-reports/es.ies.puerto.modelo.db.HibernateTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/surefire-reports/es.ies.puerto.modelo.db.JdbcTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/surefire-reports/es.ies.puerto.modelo.db.JdbcTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/test-classes/es/ies/puerto/modelo/db/HibernateTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tareaMarvel/target/test-classes/es/ies/puerto/modelo/db/JdbcTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tareaMarvel/target/test-classes/es/ies/puerto/modelo/db/JdbcTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2fawwzKBP3rY1ZS2cf2sI7lHzj0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/dam/programacion/Programacion/Unidad_7/Ejercicios/tareaMarvel",
+    "onboarding.tips.debug.path": "/home/dam/programacion/Programacion/Unidad_7/Ejercicios/PersonajesMarvel/src/main/java/es/ies/puerto/Main.java",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15055ff1-206d-4956-a37c-9fce9c61a98a" name="Changes" comment="" />
+      <created>1714052739930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714052739930</updated>
+    </task>
+    <servers />
+  </component>
+</project>
