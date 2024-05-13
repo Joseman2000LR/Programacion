@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb8e2dcf-92f0-4292-ae30-56852063c414" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2fbJKkk4jGLTg1uHADZWOsDgvK4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/jpexposito/Dropbox/Mi Mac (MacBook-Pro-de-Joatham.local)/Documents/GitHub/examen-bd-jdbc/src/main/java/es/ies/puerto/config"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/es/ies/puerto/config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="es.ies.puerto.modelo.db.dao" />
+      <recent name="es.ies.puerto.modelo.db.entidades" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DaoPersonajeTest.updatePersonajeTest">
+    <configuration name="DaoAliasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examen-bd-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.puerto.modelo.db.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.ies.puerto.modelo.db.dao" />
+      <option name="MAIN_CLASS_NAME" value="es.ies.puerto.modelo.db.dao.DaoAliasTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoEquipamientoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examen-bd-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.puerto.modelo.db.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.ies.puerto.modelo.db.dao" />
+      <option name="MAIN_CLASS_NAME" value="es.ies.puerto.modelo.db.dao.DaoEquipamientoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoPersonajeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examen-bd-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.puerto.modelo.db.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.ies.puerto.modelo.db.dao" />
+      <option name="MAIN_CLASS_NAME" value="es.ies.puerto.modelo.db.dao.DaoPersonajeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoPersonajeTest.findPersonajeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examen-bd-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.puerto.modelo.db.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.ies.puerto.modelo.db.dao" />
+      <option name="MAIN_CLASS_NAME" value="es.ies.puerto.modelo.db.dao.DaoPersonajeTest" />
+      <option name="METHOD_NAME" value="findPersonajeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoPersonajeTest.updatePersonajeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examen-bd-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.ies.puerto.modelo.db.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.ies.puerto.modelo.db.dao" />
+      <option name="MAIN_CLASS_NAME" value="es.ies.puerto.modelo.db.dao.DaoPersonajeTest" />
+      <option name="METHOD_NAME" value="updatePersonajeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DaoPersonajeTest.updatePersonajeTest" />
+        <item itemvalue="JUnit.DaoPersonajeTest" />
+        <item itemvalue="JUnit.DaoPersonajeTest.findPersonajeTest" />
+        <item itemvalue="JUnit.DaoAliasTest" />
+        <item itemvalue="JUnit.DaoEquipamientoTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb8e2dcf-92f0-4292-ae30-56852063c414" name="Changes" comment="" />
+      <created>1714063782144</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714063782144</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/ies/puerto/modelo/db/dao/DaoPersonaje.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/test/java/es/ies/puerto/modelo/db/dao/DaoPersonajeTest.java</url>
+          <line>14</line>
+          <properties field="nombrePersonajeUpdate" class="es.ies.puerto.modelo.db.dao.DaoPersonajeTest" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

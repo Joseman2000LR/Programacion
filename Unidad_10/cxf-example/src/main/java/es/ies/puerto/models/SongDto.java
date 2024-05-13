@@ -1,18 +1,18 @@
 package es.ies.puerto.models;
 
-public class Song {
+public class SongDto {
     private String id;
     private String name;
 
     private String duration;
 
-    public Song(String id, String name, String duration) {
+    public SongDto(String id, String name, String duration) {
         this.id = id;
         this.name = name;
         this.duration = duration;
     }
 
-    public Song() {
+    public SongDto() {
     }
 
     public String getId() {
