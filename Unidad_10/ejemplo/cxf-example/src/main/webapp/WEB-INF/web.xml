@@ -9,7 +9,7 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>WEB-INF/beans-song.xml</param-value>
+    <param-value>WEB-INF/beans.xml</param-value>
   </context-param>
 
   <listener>
@@ -29,4 +29,3 @@
     <url-pattern>/song-rest/*</url-pattern>
   </servlet-mapping>
 </web-app>
-

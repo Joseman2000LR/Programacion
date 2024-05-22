@@ -235,19 +235,27 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
         <version>3.2.1</version>
+        <artifactId>maven-war-plugin</artifactId>
         <configuration>
           <webResources>
             <resource>
               <directory>src/main/resources</directory>
             </resource>
           </webResources>
-          <warName>${name}</warName>
+          <warName>${packaging}</warName>
         </configuration>
       </plugin>
     </plugins>
-
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
   <reporting>
     <plugins>
@@ -257,9 +265,9 @@
         <version>${maven-javadoc-plugin.version}</version>
       </plugin>
     </plugins>
+
+
   </reporting>
 
 
-
 </project>
-
